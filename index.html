@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AB Medica — Innovazione in Sanità</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ======= NAVBAR ======= -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-ab">AB</span><span class="logo-medica">medica</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#soluzioni">Soluzioni</a>
+        <a href="#brand">Brand</a>
+        <a href="#azienda">Azienda</a>
+        <a href="#innovation">Innovation Hub</a>
+        <a href="#media">Media</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-btn">IT / EN</button>
+        <button class="search-btn" id="searchBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======= SEARCH OVERLAY ======= -->
+  <div class="search-overlay" id="searchOverlay">
+    <button class="search-close" id="searchClose">✕</button>
+    <div class="search-inner">
+      <input type="text" placeholder="Cerca su AB Medica..." class="search-input" />
+      <button class="search-submit">Cerca</button>
+    </div>
+  </div>
+
+  <!-- ======= HERO ======= -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-shape hero-shape-1"></div>
+      <div class="hero-shape hero-shape-2"></div>
+      <div class="hero-shape hero-shape-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">Leader dell'Innovazione 2026</div>
+      <h1 class="hero-title">
+        Il miglior partner per<br />
+        <span class="hero-highlight" id="heroHighlight">l'innovazione in sanità</span>
+      </h1>
+      <p class="hero-sub">
+        Dalle persone. Con le persone. Per le persone.<br />
+        Dal 1984, tecnologie d'eccellenza per la sanità italiana.
+      </p>
+      <div class="hero-btns">
+        <a href="#soluzioni" class="btn btn-primary">Scopri le Soluzioni</a>
+        <a href="#azienda" class="btn btn-outline">Chi Siamo</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">40+</span>
+          <span class="stat-label">Anni di Esperienza</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">30+</span>
+          <span class="stat-label">Brand Distribuiti</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">100+</span>
+          <span class="stat-label">Ospedali Partner</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scorri</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ======= SOLUTIONS ======= -->
+  <section class="section solutions" id="soluzioni">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Cosa facciamo</span>
+        <h2 class="section-title">Le nostre <span class="accent">Soluzioni</span></h2>
+        <p class="section-desc">Tecnologie avanzate per la diagnostica, chirurgia robotica, telemedicina e molto altro.</p>
+      </div>
+      <div class="solutions-grid">
+        <div class="solution-card" data-aos="fade-up">
+          <div class="solution-icon">
+            <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#C9ED08" stroke-width="2"/><path d="M20 32h24M32 20v24" stroke="#00376D" stroke-width="3" stroke-linecap="round"/></svg>
+          </div>
+          <div class="solution-num">01</div>
+          <h3>Digital Health</h3>
+          <p>Soluzioni di telemedicina che connettono pazienti e professionisti sanitari in tempo reale.</p>
+          <a href="#" class="card-link">Scopri di più <span>→</span></a>
+        </div>
+        <div class="solution-card featured" data-aos="fade-up" data-aos-delay="100">
+          <div class="solution-icon">
+            <svg viewBox="0 0 64 64" fill="none"><rect x="12" y="12" width="40" height="40" rx="8" stroke="#00376D" stroke-width="2"/><path d="M22 32l8 8 12-16" stroke="#C9ED08" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="solution-num">02</div>
+          <h3>Robotica Chirurgica</h3>
+          <p>da Vinci, CyberKnife, Mako — sistemi robotici d'eccellenza per interventi di precisione assoluta.</p>
+          <a href="#" class="card-link">Scopri di più <span>→</span></a>
+        </div>
+        <div class="solution-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="solution-icon">
+            <svg viewBox="0 0 64 64" fill="none"><path d="M32 12 L52 24 L52 44 L32 52 L12 44 L12 24 Z" stroke="#C9ED08" stroke-width="2"/><circle cx="32" cy="32" r="8" fill="#00376D"/></svg>
+          </div>
+          <div class="solution-num">03</div>
+          <h3>Made in AB Medica</h3>
+          <p>Prodotti proprietari: Maia, CarePad, Dolphin, Microlap e tante altre soluzioni innovative.</p>
+          <a href="#" class="card-link">Scopri di più <span>→</span></a>
+        </div>
+        <div class="solution-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="solution-icon">
+            <svg viewBox="0 0 64 64" fill="none"><path d="M12 44 Q32 10 52 44" stroke="#C9ED08" stroke-width="2"/><path d="M20 36 Q32 20 44 36" stroke="#00376D" stroke-width="2"/></svg>
+          </div>
+          <div class="solution-num">04</div>
+          <h3>Brand Distribuiti</h3>
+          <p>Stryker, Accuray, Cooper Surgical, CONMED e oltre 30 marchi internazionali leader nel settore.</p>
+          <a href="#" class="card-link">Scopri di più <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= ABOUT ======= -->
+  <section class="section about" id="azienda">
+    <div class="container about-grid">
+      <div class="about-visual">
+        <div class="about-img-wrap">
+          <div class="about-img-bg"></div>
+          <div class="about-img-overlay">
+            <div class="about-year">
+              <span class="year-num">1984</span>
+              <span class="year-label">Anno di Fondazione</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-float-card">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 3 L29 10 L29 22 L16 29 L3 22 L3 10 Z" fill="#C9ED08"/></svg>
+          <div>
+            <strong>Leader dell'Innovazione</strong>
+            <span>Corriere della Sera 2026</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="section-tag">Chi Siamo</span>
+        <h2 class="section-title">40 anni di <span class="accent">eccellenza</span><br />in sanità</h2>
+        <p>AB Medica è il partner di riferimento per l'innovazione tecnica e tecnologica in sanità in Italia. Dal 1984 selezioniamo, distribuiamo e sviluppiamo tecnologie all'avanguardia per ospedali, cliniche e professionisti sanitari.</p>
+        <p>La nostra missione è portare le migliori soluzioni internazionali nel sistema sanitario italiano, con un approccio umano e orientato ai risultati clinici.</p>
+        <div class="about-values">
+          <div class="value-item">
+            <div class="value-dot"></div>
+            <span>Innovazione Continua</span>
+          </div>
+          <div class="value-item">
+            <div class="value-dot"></div>
+            <span>Partnership Solide</span>
+          </div>
+          <div class="value-item">
+            <div class="value-dot"></div>
+            <span>Eccellenza Clinica</span>
+          </div>
+          <div class="value-item">
+            <div class="value-dot"></div>
+            <span>Supporto Dedicato</span>
+          </div>
+        </div>
+        <a href="#contatti" class="btn btn-primary">Contattaci</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= BRANDS ======= -->
+  <section class="section brands" id="brand">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">I nostri Partner</span>
+        <h2 class="section-title">Brand di <span class="accent">Eccellenza</span></h2>
+      </div>
+      <div class="brands-track-wrap">
+        <div class="brands-track">
+          <div class="brand-item">Stryker</div>
+          <div class="brand-item">Intuitive</div>
+          <div class="brand-item">Accuray</div>
+          <div class="brand-item">Cooper Surgical</div>
+          <div class="brand-item">CONMED</div>
+          <div class="brand-item">AquaBeam</div>
+          <div class="brand-item">Focal One</div>
+          <div class="brand-item">LightStrike</div>
+          <div class="brand-item">Symani</div>
+          <div class="brand-item">Stryker</div>
+          <div class="brand-item">Intuitive</div>
+          <div class="brand-item">Accuray</div>
+          <div class="brand-item">Cooper Surgical</div>
+          <div class="brand-item">CONMED</div>
+          <div class="brand-item">AquaBeam</div>
+          <div class="brand-item">Focal One</div>
+          <div class="brand-item">LightStrike</div>
+          <div class="brand-item">Symani</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= INNOVATION HUB ======= -->
+  <section class="section innovation" id="innovation">
+    <div class="container">
+      <div class="innovation-inner">
+        <div class="innovation-text">
+          <span class="section-tag light">Innovation Hub</span>
+          <h2 class="section-title white">Guidiamo il futuro<br /><span class="accent">della medicina</span></h2>
+          <p class="white-text">Il nostro Innovation Hub è il cuore pulsante della ricerca e sviluppo. Collaboriamo con università, ospedali e startup per portare le tecnologie di domani al letto del paziente oggi.</p>
+          <div class="innovation-items">
+            <div class="inno-item">
+              <div class="inno-icon">🤖</div>
+              <div>
+                <strong>AI & Machine Learning</strong>
+                <p>Algoritmi predittivi per diagnosi precoce</p>
+              </div>
+            </div>
+            <div class="inno-item">
+              <div class="inno-icon">🔬</div>
+              <div>
+                <strong>Ricerca Clinica</strong>
+                <p>Partnership con i principali centri di eccellenza</p>
+              </div>
+            </div>
+            <div class="inno-item">
+              <div class="inno-icon">📡</div>
+              <div>
+                <strong>Connettività</strong>
+                <p>Ecosistemi digitali integrati per la cura</p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn btn-lime">Esplora l'Hub</a>
+        </div>
+        <div class="innovation-visual">
+          <div class="inno-circle inno-circle-1"></div>
+          <div class="inno-circle inno-circle-2"></div>
+          <div class="inno-circle inno-circle-3"></div>
+          <div class="inno-core">
+            <span>INNOVATION</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= MEDIA CENTER ======= -->
+  <section class="section media" id="media">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Ultime Novità</span>
+        <h2 class="section-title">Media <span class="accent">Center</span></h2>
+        <p class="section-desc">News, video, podcast e rassegna stampa dal mondo AB Medica.</p>
+      </div>
+      <div class="media-tabs">
+        <button class="tab-btn active" data-tab="news">News</button>
+        <button class="tab-btn" data-tab="video">Video</button>
+        <button class="tab-btn" data-tab="podcast">Podcast</button>
+        <button class="tab-btn" data-tab="stampa">Rassegna Stampa</button>
+      </div>
+      <div class="media-grid" id="mediaGrid">
+        <article class="media-card">
+          <div class="media-card-img" style="background: linear-gradient(135deg, #00376D 0%, #0055a5 100%);">
+            <span class="media-tag">News</span>
+          </div>
+          <div class="media-card-body">
+            <span class="media-date">28 Marzo 2026</span>
+            <h3>AB Medica formalizza il closing con Intuitive</h3>
+            <p>Accordo definitivo per la distribuzione esclusiva del sistema da Vinci in Italia.</p>
+            <a href="#" class="card-link">Leggi tutto <span>→</span></a>
+          </div>
+        </article>
+        <article class="media-card">
+          <div class="media-card-img" style="background: linear-gradient(135deg, #0a4d8c 0%, #1a6bb5 100%);">
+            <span class="media-tag">Riconoscimento</span>
+          </div>
+          <div class="media-card-body">
+            <span class="media-date">15 Marzo 2026</span>
+            <h3>Leader dell'Innovazione 2026 — Corriere della Sera</h3>
+            <p>AB Medica premiata tra le aziende più innovative d'Italia nel settore healthcare.</p>
+            <a href="#" class="card-link">Leggi tutto <span>→</span></a>
+          </div>
+        </article>
+        <article class="media-card">
+          <div class="media-card-img" style="background: linear-gradient(135deg, #003d7a 0%, #006bb5 100%);">
+            <span class="media-tag">Prodotto</span>
+          </div>
+          <div class="media-card-body">
+            <span class="media-date">5 Marzo 2026</span>
+            <h3>Maia: la piattaforma di connected care evolve</h3>
+            <p>Nuove funzionalità per il monitoraggio remoto continuo del paziente cronico.</p>
+            <a href="#" class="card-link">Leggi tutto <span>→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CONTACT ======= -->
+  <section class="section contact" id="contatti">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="section-tag">Parliamo</span>
+          <h2 class="section-title">Contattaci</h2>
+          <p>Siamo a tua disposizione per qualsiasi informazione sui nostri prodotti, servizi e partnership.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <strong>Sede</strong>
+                <span>Via J.F. Kennedy 10/12, Cerro Maggiore (MI)</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <strong>Telefono</strong>
+                <span>+39 02.93305.1</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <strong>Email</strong>
+                <span>abmedica@abmedica.it</span>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link">in</a>
+            <a href="#" class="social-link">yt</a>
+            <a href="#" class="social-link">fb</a>
+            <a href="#" class="social-link">tw</a>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nome *</label>
+                <input type="text" placeholder="Il tuo nome" required />
+              </div>
+              <div class="form-group">
+                <label>Cognome *</label>
+                <input type="text" placeholder="Il tuo cognome" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" placeholder="La tua email" required />
+            </div>
+            <div class="form-group">
+              <label>Azienda</label>
+              <input type="text" placeholder="La tua azienda" />
+            </div>
+            <div class="form-group">
+              <label>Messaggio *</label>
+              <textarea placeholder="Come possiamo aiutarti?" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width">Invia Messaggio</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <span class="logo-ab">AB</span><span class="logo-medica">medica</span>
+          </a>
+          <p>Il miglior partner per l'innovazione tecnica e tecnologica in sanità dal 1984.</p>
+          <p class="footer-legal">Registro Imprese n° 08862820969</p>
+        </div>
+        <div class="footer-col">
+          <h4>Soluzioni</h4>
+          <ul>
+            <li><a href="#">Digital Health</a></li>
+            <li><a href="#">Robotica</a></li>
+            <li><a href="#">Made in AB Medica</a></li>
+            <li><a href="#">Brand Distribuiti</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Azienda</h4>
+          <ul>
+            <li><a href="#">Chi Siamo</a></li>
+            <li><a href="#">Innovation Hub</a></li>
+            <li><a href="#">Training</a></li>
+            <li><a href="#">Supporto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Media</h4>
+          <ul>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Video</a></li>
+            <li><a href="#">Podcast</a></li>
+            <li><a href="#">Rassegna Stampa</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 AB Medica S.p.A. — Tutti i diritti riservati</span>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">Whistleblowing</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
