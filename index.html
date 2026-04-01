@@ -8,567 +8,396 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css"/>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
 
-<!-- ======= LOADER ======= -->
-<div class="loader" id="loader">
-  <div class="loader-inner">
-    <div class="loader-logo">
-      <span class="logo-ab">AB</span><span class="logo-medica">medica</span>
-    </div>
-    <div class="loader-bar"><div class="loader-fill"></div></div>
+<!-- LOADER -->
+<div id="loader" class="loader">
+  <div class="loader-box">
+    <div class="loader-logo"><span class="c-lime">AB</span><span class="c-white">medica</span></div>
+    <div class="loader-track"><div class="loader-bar"></div></div>
   </div>
 </div>
 
-<!-- ======= SCROLL PROGRESS ======= -->
-<div class="scroll-progress" id="scrollProgress"></div>
+<!-- PROGRESS -->
+<div id="prog" class="scroll-prog"></div>
 
-<!-- ======= CURSOR ======= -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-follower" id="cursorFollower"></div>
+<!-- ===== NAVBAR ===== -->
+<header id="nav" class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo"><span class="c-lime">AB</span><span class="c-white">medica</span></a>
 
-<!-- ======= NAVBAR ======= -->
-<header class="navbar" id="navbar">
-  <div class="nav-container">
-    <a href="#home" class="nav-logo">
-      <span class="logo-ab">AB</span><span class="logo-medica">medica</span>
-    </a>
+    <nav class="nav-links" id="navLinks">
 
-    <nav class="nav-main" id="navMain">
-      <!-- SOLUZIONI -->
-      <div class="nav-item has-mega">
-        <button class="nav-btn">Soluzioni <svg class="chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
-        <div class="mega-menu">
-          <div class="mega-inner">
-            <div class="mega-col">
-              <div class="mega-col-header">
-                <div class="mega-col-icon">💻</div>
-                <span>Digital Health</span>
-              </div>
-              <ul>
-                <li><a href="#digital-health"><span>Telemedicina</span><small>Connected care e monitoraggio remoto</small></a></li>
-                <li><a href="#digital-health"><span>MAIA Platform</span><small>Piattaforma di cura connessa</small></a></li>
-                <li><a href="#digital-health"><span>CarePad</span><small>Dispositivo di connected care</small></a></li>
-                <li><a href="#digital-health"><span>CardioClinic</span><small>Telecardiologo 24/7</small></a></li>
-              </ul>
+      <!-- Soluzioni -->
+      <div class="dd" id="dd-sol">
+        <button class="dd-btn" data-dd="dd-sol">Soluzioni <svg class="arr" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
+        <div class="dd-panel dd-sol-panel">
+          <div class="dd-cols">
+            <div class="dd-col">
+              <div class="dd-col-title">💻 Digital Health</div>
+              <a href="#digital-health" class="dd-item"><strong>Telemedicina</strong><span>Connected care e monitoraggio remoto</span></a>
+              <a href="#digital-health" class="dd-item"><strong>MAIA Platform</strong><span>Piattaforma di cura connessa</span></a>
+              <a href="#digital-health" class="dd-item"><strong>CarePad</strong><span>Dispositivo di connected care</span></a>
+              <a href="#digital-health" class="dd-item"><strong>CardioClinic</strong><span>Telecardiologo 24/7</span></a>
             </div>
-            <div class="mega-col">
-              <div class="mega-col-header">
-                <div class="mega-col-icon">🤖</div>
-                <span>Robotica</span>
-              </div>
-              <ul>
-                <li><a href="#robotica"><span>da Vinci</span><small>Sistema chirurgico robotico Intuitive</small></a></li>
-                <li><a href="#robotica"><span>CyberKnife</span><small>Radiosurgery di precisione</small></a></li>
-                <li><a href="#robotica"><span>Mako</span><small>Robotica ortopedica Stryker</small></a></li>
-                <li><a href="#robotica"><span>AquaBeam</span><small>Ablazione robotica prostata</small></a></li>
-                <li><a href="#robotica"><span>Focal One</span><small>HIFU robotico per il cancro</small></a></li>
-                <li><a href="#robotica"><span>LightStrike</span><small>Disinfezione robotica UV</small></a></li>
-                <li><a href="#robotica"><span>Symani</span><small>Microchirurgia robotica</small></a></li>
-              </ul>
+            <div class="dd-col">
+              <div class="dd-col-title">🤖 Robotica</div>
+              <a href="#robotica" class="dd-item"><strong>da Vinci</strong><span>Chirurgia robotica mininvasiva</span></a>
+              <a href="#robotica" class="dd-item"><strong>CyberKnife</strong><span>Radiosurgery di precisione</span></a>
+              <a href="#robotica" class="dd-item"><strong>Mako</strong><span>Robotica ortopedica Stryker</span></a>
+              <a href="#robotica" class="dd-item"><strong>AquaBeam</strong><span>Ablazione robotica prostata</span></a>
+              <a href="#robotica" class="dd-item"><strong>Focal One</strong><span>HIFU robotico oncologia</span></a>
+              <a href="#robotica" class="dd-item"><strong>LightStrike</strong><span>Disinfezione robotica UV</span></a>
+              <a href="#robotica" class="dd-item"><strong>Symani</strong><span>Microchirurgia robotica</span></a>
             </div>
-            <div class="mega-col">
-              <div class="mega-col-header">
-                <div class="mega-col-icon">⚡</div>
-                <span>Made in AB Medica</span>
-              </div>
-              <ul>
-                <li><a href="#made"><span>Maia</span><small>Connected care platform</small></a></li>
-                <li><a href="#made"><span>Dolphin</span><small>Ecografia portabile</small></a></li>
-                <li><a href="#made"><span>Microlap</span><small>Endoscopia mininvasiva</small></a></li>
-                <li><a href="#made"><span>Sam</span><small>Smart assistance module</small></a></li>
-                <li><a href="#made"><span>EasyKit</span><small>Kit diagnostico rapido</small></a></li>
-                <li><a href="#made"><span>Bridgy</span><small>Bridge care solution</small></a></li>
-                <li><a href="#made"><span>Nessy</span><small>Neonatal smart system</small></a></li>
-                <li><a href="#made"><span>Evolap</span><small>Laparoscopia evoluta</small></a></li>
-                <li><a href="#made"><span>WinPack</span><small>Wound care innovativo</small></a></li>
-              </ul>
+            <div class="dd-col">
+              <div class="dd-col-title">⚡ Made in AB Medica</div>
+              <a href="#made" class="dd-item"><strong>Maia</strong><span>Connected care platform</span></a>
+              <a href="#made" class="dd-item"><strong>Dolphin</strong><span>Ecografia portabile</span></a>
+              <a href="#made" class="dd-item"><strong>Microlap</strong><span>Endoscopia mininvasiva</span></a>
+              <a href="#made" class="dd-item"><strong>Sam</strong><span>Smart assistance module</span></a>
+              <a href="#made" class="dd-item"><strong>EasyKit</strong><span>Kit diagnostico rapido</span></a>
+              <a href="#made" class="dd-item"><strong>Nessy</strong><span>Neonatal smart system</span></a>
+              <a href="#made" class="dd-item"><strong>Evolap</strong><span>Laparoscopia evoluta</span></a>
             </div>
-            <div class="mega-col">
-              <div class="mega-col-header">
-                <div class="mega-col-icon">🌐</div>
-                <span>Brand Distribuiti</span>
-              </div>
-              <ul>
-                <li><a href="#brand"><span>Stryker</span><small>Leader mondiale ortopedia</small></a></li>
-                <li><a href="#brand"><span>Accuray</span><small>Radioterapia avanzata</small></a></li>
-                <li><a href="#brand"><span>Cooper Surgical</span><small>Salute della donna</small></a></li>
-                <li><a href="#brand"><span>CONMED</span><small>Chirurgia endoscopica</small></a></li>
-                <li><a href="#brand"><span>Varian Medical</span><small>Oncologia radioterapia</small></a></li>
-                <li><a href="#brand"><span>Procept Biorobotics</span><small>Urologia robotica</small></a></li>
-                <li><a href="#brand"><span>Merit Medical</span><small>Soluzioni cardiovascolari</small></a></li>
-                <li><a href="#brand"><span>EDAP TMS</span><small>Tecnologie ultrasuoni</small></a></li>
-              </ul>
+            <div class="dd-col">
+              <div class="dd-col-title">🌐 Brand Distribuiti</div>
+              <a href="#brand" class="dd-item"><strong>Stryker</strong><span>Leader ortopedia mondiale</span></a>
+              <a href="#brand" class="dd-item"><strong>Accuray</strong><span>Radioterapia avanzata</span></a>
+              <a href="#brand" class="dd-item"><strong>Cooper Surgical</strong><span>Salute della donna</span></a>
+              <a href="#brand" class="dd-item"><strong>CONMED</strong><span>Chirurgia endoscopica</span></a>
+              <a href="#brand" class="dd-item"><strong>Varian Medical</strong><span>Oncologia radioterapia</span></a>
+              <a href="#brand" class="dd-item"><strong>Procept BioRobotics</strong><span>Urologia robotica</span></a>
+              <a href="#brand" class="dd-item"><strong>EDAP TMS</strong><span>Tecnologie ultrasuoni</span></a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- AB MEDICA -->
-      <div class="nav-item has-mega">
-        <button class="nav-btn">AB Medica <svg class="chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
-        <div class="mega-menu mega-menu--sm">
-          <div class="mega-inner">
-            <div class="mega-col">
-              <div class="mega-col-header"><div class="mega-col-icon">🏢</div><span>L'Azienda</span></div>
-              <ul>
-                <li><a href="#azienda"><span>Essere AB Medica</span><small>La nostra filosofia e i valori</small></a></li>
-                <li><a href="#azienda"><span>La Storia</span><small>Dal 1984 ad oggi</small></a></li>
-                <li><a href="#azienda"><span>Casa AB Medica</span><small>La nostra sede</small></a></li>
-                <li><a href="#azienda"><span>Governance</span><small>Struttura e leadership</small></a></li>
-                <li><a href="#azienda"><span>Pari Opportunità</span><small>Inclusione e diversità</small></a></li>
-                <li><a href="#azienda"><span>Sostenibilità</span><small>Il nostro impegno ESG</small></a></li>
-                <li><a href="#azienda"><span>Network</span><small>Il gruppo AB Medica</small></a></li>
-                <li><a href="#contatti"><span>Careers</span><small>Lavora con noi</small></a></li>
-              </ul>
+      <!-- AB Medica -->
+      <div class="dd" id="dd-ab">
+        <button class="dd-btn" data-dd="dd-ab">AB Medica <svg class="arr" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
+        <div class="dd-panel dd-sm">
+          <div class="dd-cols">
+            <div class="dd-col">
+              <div class="dd-col-title">🏢 L'Azienda</div>
+              <a href="#azienda" class="dd-item"><strong>Essere AB Medica</strong><span>Filosofia e valori</span></a>
+              <a href="#azienda" class="dd-item"><strong>La Storia</strong><span>Dal 1984 ad oggi</span></a>
+              <a href="#azienda" class="dd-item"><strong>Casa AB Medica</strong><span>La nostra sede</span></a>
+              <a href="#azienda" class="dd-item"><strong>Governance</strong><span>Struttura e leadership</span></a>
+              <a href="#azienda" class="dd-item"><strong>Sostenibilità</strong><span>Il nostro impegno ESG</span></a>
+              <a href="#azienda" class="dd-item"><strong>Network</strong><span>Il gruppo AB Medica</span></a>
+              <a href="#contatti" class="dd-item"><strong>Careers</strong><span>Lavora con noi</span></a>
             </div>
-            <div class="mega-col mega-col--highlight">
-              <div class="mega-highlight-card">
-                <div class="mhc-badge">Riconoscimento 2026</div>
+            <div class="dd-col dd-col-hl">
+              <div class="dd-hl-card">
+                <div class="dd-hl-tag">Riconoscimento 2026</div>
                 <h4>Leader dell'Innovazione</h4>
                 <p>Premiati dal Corriere della Sera tra le aziende più innovative d'Italia nel settore healthcare.</p>
-                <a href="#azienda" class="mhc-link">Scopri →</a>
+                <a href="#azienda">Scopri →</a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- INNOVATION HUB -->
-      <div class="nav-item has-mega">
-        <button class="nav-btn">Innovation Hub <svg class="chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
-        <div class="mega-menu mega-menu--sm">
-          <div class="mega-inner">
-            <div class="mega-col">
-              <div class="mega-col-header"><div class="mega-col-icon">🔬</div><span>Ricerca & Sviluppo</span></div>
-              <ul>
-                <li><a href="#innovation"><span>Ricerca</span><small>Collaborazioni con università e centri</small></a></li>
-                <li><a href="#innovation"><span>Sviluppo</span><small>Tecnologie multidisciplinari integrate</small></a></li>
-                <li><a href="#innovation"><span>Progetti Finanziati</span><small>Programmi comunitari europei</small></a></li>
-                <li><a href="#innovation"><span>AI & Machine Learning</span><small>Diagnosi predittiva avanzata</small></a></li>
-              </ul>
+      <!-- Innovation Hub -->
+      <div class="dd" id="dd-inno">
+        <button class="dd-btn" data-dd="dd-inno">Innovation Hub <svg class="arr" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
+        <div class="dd-panel dd-sm">
+          <div class="dd-cols">
+            <div class="dd-col">
+              <div class="dd-col-title">🔬 R&amp;D</div>
+              <a href="#innovation" class="dd-item"><strong>Ricerca</strong><span>Collaborazioni con università e centri</span></a>
+              <a href="#innovation" class="dd-item"><strong>Sviluppo</strong><span>Tecnologie multidisciplinari integrate</span></a>
+              <a href="#innovation" class="dd-item"><strong>Progetti Finanziati EU</strong><span>Programmi comunitari europei</span></a>
+              <a href="#innovation" class="dd-item"><strong>AI & Machine Learning</strong><span>Diagnosi predittiva avanzata</span></a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- FORMAZIONE -->
-      <div class="nav-item has-mega">
-        <button class="nav-btn">Formazione <svg class="chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
-        <div class="mega-menu mega-menu--sm">
-          <div class="mega-inner">
-            <div class="mega-col">
-              <div class="mega-col-header"><div class="mega-col-icon">🎓</div><span>Training</span></div>
-              <ul>
-                <li><a href="#formazione"><span>Training & Simulation Center</span><small>Centro di formazione avanzata</small></a></li>
-                <li><a href="#formazione"><span>Corsi Chirurgia Robotica</span><small>Certificazioni internazionali</small></a></li>
-                <li><a href="#formazione"><span>ECM — Educazione Continua</span><small>Crediti formativi per medici</small></a></li>
-                <li><a href="#formazione"><span>Webinar & Live Training</span><small>Formazione a distanza</small></a></li>
-              </ul>
+      <!-- Formazione -->
+      <div class="dd" id="dd-form">
+        <button class="dd-btn" data-dd="dd-form">Formazione <svg class="arr" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
+        <div class="dd-panel dd-sm">
+          <div class="dd-cols">
+            <div class="dd-col">
+              <div class="dd-col-title">🎓 Training</div>
+              <a href="#formazione" class="dd-item"><strong>Training & Simulation Center</strong><span>Centro di formazione avanzata</span></a>
+              <a href="#formazione" class="dd-item"><strong>Chirurgia Robotica</strong><span>Certificazioni internazionali</span></a>
+              <a href="#formazione" class="dd-item"><strong>ECM — Educazione Continua</strong><span>Crediti formativi per medici</span></a>
+              <a href="#formazione" class="dd-item"><strong>Webinar & Live Training</strong><span>Formazione a distanza</span></a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ASSISTENZA -->
-      <div class="nav-item">
-        <a href="#assistenza" class="nav-btn">Assistenza</a>
-      </div>
+      <a href="#assistenza" class="nav-a">Assistenza</a>
+      <a href="#futuro" class="nav-a">Il Futuro della Sanità</a>
 
-      <!-- IL FUTURO DELLA SANITÀ -->
-      <div class="nav-item">
-        <a href="#futuro" class="nav-btn">Il Futuro della Sanità</a>
-      </div>
-
-      <!-- MEDIA CENTER -->
-      <div class="nav-item has-mega">
-        <button class="nav-btn">Media Center <svg class="chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
-        <div class="mega-menu mega-menu--sm">
-          <div class="mega-inner">
-            <div class="mega-col">
-              <div class="mega-col-header"><div class="mega-col-icon">📰</div><span>Contenuti</span></div>
-              <ul>
-                <li><a href="#media"><span>News</span><small>Aggiornamenti e comunicati stampa</small></a></li>
-                <li><a href="#media"><span>Video</span><small>Interviste e dimostrazioni</small></a></li>
-                <li><a href="#media"><span>Podcast</span><small>Sanità Digitale e Innovation</small></a></li>
-                <li><a href="#media"><span>Rassegna Stampa</span><small>AB Medica sui media nazionali</small></a></li>
-              </ul>
+      <!-- Media Center -->
+      <div class="dd" id="dd-media">
+        <button class="dd-btn" data-dd="dd-media">Media Center <svg class="arr" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
+        <div class="dd-panel dd-sm">
+          <div class="dd-cols">
+            <div class="dd-col">
+              <div class="dd-col-title">📰 Contenuti</div>
+              <a href="#media" class="dd-item"><strong>News</strong><span>Aggiornamenti e comunicati</span></a>
+              <a href="#media" class="dd-item"><strong>Video</strong><span>Interviste e dimostrazioni</span></a>
+              <a href="#media" class="dd-item"><strong>Podcast</strong><span>Sanità Digitale e Innovation</span></a>
+              <a href="#media" class="dd-item"><strong>Rassegna Stampa</strong><span>AB Medica sui media nazionali</span></a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- CONTATTI -->
-      <div class="nav-item">
-        <a href="#contatti" class="nav-btn">Contatti</a>
-      </div>
+      <a href="#contatti" class="nav-a">Contatti</a>
     </nav>
 
-    <div class="nav-actions">
-      <button class="lang-btn">🇮🇹 IT</button>
-      <button class="search-btn" id="searchBtn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <div class="nav-right">
+      <button class="nav-icon-btn" id="searchBtn" title="Cerca">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       </button>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span class="lang-toggle">IT / EN</span>
+      <button class="burger" id="burger">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
-
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu-inner">
-      <div class="mobile-acc">
-        <div class="mobile-acc-item">
-          <button class="mobile-acc-btn">Soluzioni <svg class="chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
-          <div class="mobile-acc-body">
-            <a href="#digital-health">Digital Health / Telemedicina</a>
-            <a href="#robotica">Robotica — da Vinci, CyberKnife, Mako</a>
-            <a href="#made">Made in AB Medica</a>
-            <a href="#brand">Brand Distribuiti (30+)</a>
-          </div>
-        </div>
-        <div class="mobile-acc-item">
-          <button class="mobile-acc-btn">AB Medica <svg class="chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
-          <div class="mobile-acc-body">
-            <a href="#azienda">Essere AB Medica</a>
-            <a href="#azienda">La Storia</a>
-            <a href="#azienda">Governance</a>
-            <a href="#azienda">Sostenibilità</a>
-            <a href="#azienda">Network</a>
-            <a href="#contatti">Careers</a>
-          </div>
-        </div>
-        <div class="mobile-acc-item">
-          <button class="mobile-acc-btn">Innovation Hub <svg class="chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
-          <div class="mobile-acc-body">
-            <a href="#innovation">Ricerca</a>
-            <a href="#innovation">Sviluppo</a>
-            <a href="#innovation">Progetti Finanziati</a>
-          </div>
-        </div>
-        <div class="mobile-acc-item">
-          <button class="mobile-acc-btn">Formazione <svg class="chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
-          <div class="mobile-acc-body">
-            <a href="#formazione">Training & Simulation Center</a>
-            <a href="#formazione">Corsi Chirurgia Robotica</a>
-            <a href="#formazione">ECM — Educazione Continua</a>
-          </div>
-        </div>
-        <a href="#assistenza" class="mobile-link">Assistenza</a>
-        <a href="#futuro" class="mobile-link">Il Futuro della Sanità</a>
-        <div class="mobile-acc-item">
-          <button class="mobile-acc-btn">Media Center <svg class="chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
-          <div class="mobile-acc-body">
-            <a href="#media">News</a>
-            <a href="#media">Video</a>
-            <a href="#media">Podcast</a>
-            <a href="#media">Rassegna Stampa</a>
-          </div>
-        </div>
-        <a href="#contatti" class="mobile-link">Contatti</a>
-      </div>
-    </div>
-  </div>
 </header>
 
-<!-- ======= SEARCH OVERLAY ======= -->
-<div class="search-overlay" id="searchOverlay">
-  <button class="search-close" id="searchClose">✕</button>
-  <div class="search-inner">
-    <p class="search-label">Cosa stai cercando?</p>
-    <div class="search-row">
-      <input type="text" id="searchInput" placeholder="es. da Vinci, telemedicina, cardiologia..." class="search-input" autocomplete="off"/>
-      <button class="search-submit">Cerca</button>
+<!-- MOBILE DRAWER -->
+<div id="drawer" class="drawer">
+  <div class="drawer-inner">
+    <div class="mob-acc">
+      <div class="mob-item">
+        <button class="mob-hd">Soluzioni <svg class="arr" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
+        <div class="mob-body">
+          <a href="#digital-health">Digital Health / Telemedicina</a>
+          <a href="#robotica">da Vinci · CyberKnife · Mako</a>
+          <a href="#made">Made in AB Medica</a>
+          <a href="#brand">Brand Distribuiti (30+)</a>
+        </div>
+      </div>
+      <div class="mob-item">
+        <button class="mob-hd">AB Medica <svg class="arr" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
+        <div class="mob-body">
+          <a href="#azienda">Essere AB Medica</a>
+          <a href="#azienda">La Storia</a>
+          <a href="#azienda">Governance</a>
+          <a href="#azienda">Sostenibilità</a>
+          <a href="#contatti">Careers</a>
+        </div>
+      </div>
+      <div class="mob-item">
+        <button class="mob-hd">Innovation Hub <svg class="arr" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
+        <div class="mob-body">
+          <a href="#innovation">Ricerca & Sviluppo</a>
+          <a href="#innovation">Progetti EU</a>
+          <a href="#innovation">AI & Machine Learning</a>
+        </div>
+      </div>
+      <div class="mob-item">
+        <button class="mob-hd">Formazione <svg class="arr" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
+        <div class="mob-body">
+          <a href="#formazione">Training & Simulation Center</a>
+          <a href="#formazione">ECM — Educazione Continua</a>
+          <a href="#formazione">Webinar & Live Training</a>
+        </div>
+      </div>
+      <a href="#assistenza" class="mob-link">Assistenza</a>
+      <a href="#futuro" class="mob-link">Il Futuro della Sanità</a>
+      <div class="mob-item">
+        <button class="mob-hd">Media Center <svg class="arr" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></button>
+        <div class="mob-body">
+          <a href="#media">News</a>
+          <a href="#media">Video</a>
+          <a href="#media">Podcast</a>
+          <a href="#media">Rassegna Stampa</a>
+        </div>
+      </div>
+      <a href="#contatti" class="mob-link">Contatti</a>
     </div>
-    <div class="search-suggestions">
-      <span>Ricerche frequenti:</span>
-      <button>da Vinci</button>
-      <button>Telemedicina</button>
-      <button>CyberKnife</button>
-      <button>Maia</button>
-      <button>Innovation Hub</button>
+  </div>
+</div>
+<div id="overlay" class="overlay"></div>
+
+<!-- SEARCH -->
+<div id="searchBox" class="search-box">
+  <button id="searchClose" class="search-x">✕</button>
+  <div class="search-wrap">
+    <p class="search-label">Cosa cerchi?</p>
+    <div class="search-row">
+      <input id="searchInput" type="text" placeholder="es. da Vinci, telemedicina..." class="search-inp"/>
+      <button class="search-go">Cerca</button>
+    </div>
+    <div class="search-tags">
+      <span>Frequenti:</span>
+      <button>da Vinci</button><button>Telemedicina</button><button>CyberKnife</button><button>Maia</button>
     </div>
   </div>
 </div>
 
-<!-- ======= HERO ======= -->
-<section class="hero" id="home">
-  <canvas class="hero-canvas" id="heroCanvas"></canvas>
-  <div class="hero-content">
-    <div class="hero-eyebrow">
-      <span class="hero-dot"></span>
-      <span>Leader dell'Innovazione 2026 — Corriere della Sera</span>
+<!-- ===== HERO ===== -->
+<section id="home" class="hero">
+  <canvas id="heroCanvas" class="hero-canvas"></canvas>
+  <div class="hero-wrap">
+    <div class="hero-badge"><span class="badge-dot"></span>Leader dell'Innovazione 2026 — Corriere della Sera</div>
+    <h1 class="hero-h1">Il miglior partner per<br><span id="heroSpan" class="hero-span">l'innovazione in sanità</span></h1>
+    <p class="hero-p">Dalle persone. Con le persone. Per le persone.<br>Dal 1984, tecnologie d'eccellenza per la sanità italiana.</p>
+    <div class="hero-btns">
+      <a href="#soluzioni" class="btn-primary">Le nostre soluzioni</a>
+      <a href="#azienda" class="btn-ghost">Chi siamo</a>
     </div>
-    <h1 class="hero-title">
-      Il miglior partner per<br/>
-      <div class="hero-rotate-wrap">
-        <span class="hero-rotate" id="heroRotate">l'innovazione in sanità</span>
-      </div>
-    </h1>
-    <p class="hero-sub">
-      Dalle persone. Con le persone. Per le persone.<br/>
-      Dal 1984, tecnologie d'eccellenza per la sanità italiana.
-    </p>
-    <div class="hero-cta">
-      <a href="#soluzioni" class="btn btn-lime">Le nostre soluzioni</a>
-      <a href="#azienda" class="btn btn-ghost">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/></svg>
-        Chi siamo
-      </a>
-    </div>
-    <div class="hero-stats">
-      <div class="hstat">
-        <span class="hstat-n" data-target="40">0</span><span class="hstat-s">+</span>
-        <span class="hstat-l">Anni di Esperienza</span>
-      </div>
-      <div class="hstat-sep"></div>
-      <div class="hstat">
-        <span class="hstat-n" data-target="30">0</span><span class="hstat-s">+</span>
-        <span class="hstat-l">Brand Partner</span>
-      </div>
-      <div class="hstat-sep"></div>
-      <div class="hstat">
-        <span class="hstat-n" data-target="500">0</span><span class="hstat-s">+</span>
-        <span class="hstat-l">Ospedali Serviti</span>
-      </div>
-      <div class="hstat-sep"></div>
-      <div class="hstat">
-        <span class="hstat-n" data-target="1984">0</span>
-        <span class="hstat-l">Anno di Fondazione</span>
-      </div>
+    <div class="hero-nums">
+      <div class="hn"><span class="hn-n" data-to="40">0</span><span class="hn-s">+</span><span class="hn-l">anni di esperienza</span></div>
+      <div class="hn-sep"></div>
+      <div class="hn"><span class="hn-n" data-to="30">0</span><span class="hn-s">+</span><span class="hn-l">brand partner</span></div>
+      <div class="hn-sep"></div>
+      <div class="hn"><span class="hn-n" data-to="500">0</span><span class="hn-s">+</span><span class="hn-l">ospedali serviti</span></div>
+      <div class="hn-sep"></div>
+      <div class="hn"><span class="hn-n" data-to="1984">0</span><span class="hn-l">anno di fondazione</span></div>
     </div>
   </div>
-  <div class="hero-scroll-ind">
-    <div class="hsi-mouse">
-      <div class="hsi-wheel"></div>
-    </div>
-    <span>Scorri</span>
-  </div>
+  <div class="hero-scroll"><div class="hs-mouse"><div class="hs-w"></div></div><span>Scorri</span></div>
 </section>
 
-<!-- ======= SOLUTIONS TABS ======= -->
-<section class="section sol-tabs" id="soluzioni">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">Cosa Offriamo</span>
-      <h2 class="section-title">Le nostre <span class="accent">Soluzioni</span></h2>
-      <p class="section-desc">Un ecosistema completo di tecnologie avanzate per la sanità moderna.</p>
+<!-- ===== SOLUZIONI ===== -->
+<section id="soluzioni" class="sec bg-light">
+  <div class="wrap">
+    <div class="sec-hd fade-up">
+      <span class="tag">Cosa offriamo</span>
+      <h2>Le nostre <span class="c-lime">Soluzioni</span></h2>
+      <p>Un ecosistema completo di tecnologie avanzate per la sanità moderna.</p>
     </div>
-    <div class="st-tabs reveal">
-      <button class="st-tab active" data-sol="digital">💻 Digital Health</button>
-      <button class="st-tab" data-sol="robot">🤖 Robotica</button>
-      <button class="st-tab" data-sol="made">⚡ Made in AB Medica</button>
-      <button class="st-tab" data-sol="brand">🌐 Brand Distribuiti</button>
+    <div class="sol-tabs fade-up">
+      <button class="stab active" data-p="p-dig">💻 Digital Health</button>
+      <button class="stab" data-p="p-rob">🤖 Robotica</button>
+      <button class="stab" data-p="p-mad">⚡ Made in AB Medica</button>
+      <button class="stab" data-p="p-bra">🌐 Brand Distribuiti</button>
     </div>
-    <div class="st-content" id="stContent">
-      <!-- Digital Health -->
-      <div class="st-panel active" data-panel="digital">
-        <div class="st-panel-grid">
-          <div class="st-panel-text">
-            <h3>Digital Health & Telemedicina</h3>
-            <p>AB Medica guida la trasformazione digitale della sanità italiana con un ecosistema di soluzioni che connettono ospedali, servizi territoriali e assistenza domiciliare. Il nostro approccio integra piattaforme cliniche avanzate con servizi professionali dedicati.</p>
-            <ul class="st-features">
-              <li><span class="sf-dot"></span>Telecardiologo 24/7 con valutazione personalizzata</li>
-              <li><span class="sf-dot"></span>Teleabilitazione a domicilio con monitoraggio real-time</li>
-              <li><span class="sf-dot"></span>Gestione remota parametri vitali e dati clinici</li>
-              <li><span class="sf-dot"></span>Centro servizi clinici attivo H24 in Italia</li>
-              <li><span class="sf-dot"></span>Position Paper sulla telemedicina</li>
-            </ul>
-            <a href="#digital-health" class="btn btn-navy">Approfondisci</a>
-          </div>
-          <div class="st-panel-cards">
-            <div class="st-card">
-              <div class="stc-icon">💊</div>
-              <h4>MAIA Platform</h4>
-              <p>Piattaforma flagship per la coordinazione della cura e gestione dei percorsi clinici connessi.</p>
-            </div>
-            <div class="st-card">
-              <div class="stc-icon">📱</div>
-              <h4>CarePad</h4>
-              <p>Dispositivo dedicato al paziente per il monitoraggio domiciliare continuo e comunicazione clinica.</p>
-            </div>
-            <div class="st-card">
-              <div class="stc-icon">❤️</div>
-              <h4>CardioClinic</h4>
-              <p>Servizio di telecardiologia con elettrocardiogramma da remoto e refertazione immediata.</p>
-            </div>
-            <div class="st-card">
-              <div class="stc-icon">🏥</div>
-              <h4>Bridgy</h4>
-              <p>Soluzione bridge per la continuità assistenziale tra ospedale e territorio.</p>
-            </div>
-          </div>
+
+    <div id="p-dig" class="sol-panel active fade-up">
+      <div class="sol-2col">
+        <div class="sol-text">
+          <h3>Digital Health & Telemedicina</h3>
+          <p>AB Medica guida la trasformazione digitale della sanità italiana con soluzioni che connettono ospedali, servizi territoriali e assistenza domiciliare in un unico ecosistema di cura.</p>
+          <ul class="feat-list">
+            <li>Telecardiologo H24 con valutazione personalizzata</li>
+            <li>Teleabilitazione a domicilio con monitoraggio real-time</li>
+            <li>Gestione remota parametri vitali e dati clinici</li>
+            <li>Centro servizi clinici attivo 24/7 in Italia</li>
+          </ul>
+          <a href="#digital-health" class="btn-navy">Approfondisci</a>
+        </div>
+        <div class="sol-cards">
+          <div class="scard tilt"><div class="scard-ico">💊</div><h4>MAIA Platform</h4><p>Piattaforma flagship per coordinazione della cura e gestione dei percorsi clinici connessi.</p></div>
+          <div class="scard tilt"><div class="scard-ico">📱</div><h4>CarePad</h4><p>Dispositivo dedicato al paziente per monitoraggio domiciliare continuo.</p></div>
+          <div class="scard tilt"><div class="scard-ico">❤️</div><h4>CardioClinic</h4><p>ECG da remoto con refertazione immediata da specialista cardiologico.</p></div>
+          <div class="scard tilt"><div class="scard-ico">🏥</div><h4>Bridgy</h4><p>Continuità assistenziale tra ospedale e territorio.</p></div>
         </div>
       </div>
-      <!-- Robotica -->
-      <div class="st-panel" data-panel="robot">
-        <div class="st-panel-grid">
-          <div class="st-panel-text">
-            <h3>Robotica Chirurgica</h3>
-            <p>Distribuiamo i sistemi robotici più avanzati al mondo, portando la precisione assoluta nelle sale operatorie italiane. Dalla chirurgia mininvasiva alla radiosurgery, dalla robotica ortopedica alla microchirurgia.</p>
-            <ul class="st-features">
-              <li><span class="sf-dot"></span>Sistema da Vinci — chirurgia robotica laparoscopica</li>
-              <li><span class="sf-dot"></span>CyberKnife — radiosurgery stereotassica</li>
-              <li><span class="sf-dot"></span>Mako — protesi robotica ortopedica</li>
-              <li><span class="sf-dot"></span>AquaBeam — ablazione robotica prostatica</li>
-              <li><span class="sf-dot"></span>Symani — microchirurgia robotica</li>
-            </ul>
-            <a href="#robotica" class="btn btn-navy">Scopri tutti i sistemi</a>
-          </div>
-          <div class="st-panel-cards">
-            <div class="st-card">
-              <div class="stc-icon">🦾</div>
-              <h4>da Vinci</h4>
-              <p>Il sistema robotico più diffuso al mondo per la chirurgia mininvasiva laparoscopica. Intuitive Surgical.</p>
-            </div>
-            <div class="st-card">
-              <div class="stc-icon">☢️</div>
-              <h4>CyberKnife</h4>
-              <p>Radiosurgery robotica non invasiva per tumori in tutto il corpo con precisione submillimetrica.</p>
-            </div>
-            <div class="st-card">
-              <div class="stc-icon">🦴</div>
-              <h4>Mako</h4>
-              <p>Sistema robotico Stryker per la chirurgia protesica del ginocchio e dell'anca con piano 3D.</p>
-            </div>
-            <div class="st-card">
-              <div class="stc-icon">💧</div>
-              <h4>AquaBeam</h4>
-              <p>Ablazione robotica della prostata con acqua a alta pressione guidata da imaging intraoperatorio.</p>
-            </div>
-          </div>
+    </div>
+
+    <div id="p-rob" class="sol-panel fade-up">
+      <div class="sol-2col">
+        <div class="sol-text">
+          <h3>Robotica Chirurgica</h3>
+          <p>Distribuiamo i sistemi robotici più avanzati al mondo, portando la precisione assoluta nelle sale operatorie italiane. Dalla chirurgia mininvasiva alla radiosurgery e alla microchirurgia.</p>
+          <ul class="feat-list">
+            <li>da Vinci — chirurgia robotica laparoscopica</li>
+            <li>CyberKnife — radiosurgery stereotassica</li>
+            <li>Mako — protesi robotica ortopedica 3D</li>
+            <li>AquaBeam, Focal One, Symani, LightStrike</li>
+          </ul>
+          <a href="#robotica" class="btn-navy">Scopri tutti i sistemi</a>
+        </div>
+        <div class="sol-cards">
+          <div class="scard tilt"><div class="scard-ico">🦾</div><h4>da Vinci</h4><p>Sistema robotico più diffuso al mondo per la chirurgia mininvasiva laparoscopica.</p></div>
+          <div class="scard tilt"><div class="scard-ico">☢️</div><h4>CyberKnife</h4><p>Radiosurgery robotica non invasiva per tumori in tutto il corpo con precisione submillimetrica.</p></div>
+          <div class="scard tilt"><div class="scard-ico">🦴</div><h4>Mako</h4><p>Robotica Stryker per protesi di ginocchio e anca con piano chirurgico 3D personalizzato.</p></div>
+          <div class="scard tilt"><div class="scard-ico">💧</div><h4>AquaBeam</h4><p>Ablazione robotica della prostata con acqua ad alta pressione guidata da imaging.</p></div>
         </div>
       </div>
-      <!-- Made in AB Medica -->
-      <div class="st-panel" data-panel="made">
-        <div class="st-panel-grid">
-          <div class="st-panel-text">
-            <h3>Made in AB Medica</h3>
-            <p>Prodotti sviluppati internamente dal team AB Medica: soluzioni proprietarie innovative pensate per rispondere alle esigenze specifiche del sistema sanitario italiano con qualità e affidabilità certificate.</p>
-            <ul class="st-features">
-              <li><span class="sf-dot"></span>Progettazione e sviluppo in Italia</li>
-              <li><span class="sf-dot"></span>Certificazioni CE e FDA</li>
-              <li><span class="sf-dot"></span>Supporto tecnico dedicato</li>
-              <li><span class="sf-dot"></span>Integrazione con sistemi ospedalieri esistenti</li>
-            </ul>
-            <a href="#made" class="btn btn-navy">Vedi tutti i prodotti</a>
-          </div>
-          <div class="st-panel-cards">
-            <div class="st-card"><div class="stc-icon">🌊</div><h4>Dolphin</h4><p>Sistema di ecografia portabile ad alta risoluzione per diagnosi bedside.</p></div>
-            <div class="st-card"><div class="stc-icon">🔭</div><h4>Microlap</h4><p>Sistema endoscopico mininvasivo di nuova generazione per chirurgia ambulatoriale.</p></div>
-            <div class="st-card"><div class="stc-icon">🤝</div><h4>Sam</h4><p>Smart Assistance Module per la gestione intelligente del paziente in degenza.</p></div>
-            <div class="st-card"><div class="stc-icon">🧬</div><h4>Nessy</h4><p>Sistema di monitoraggio neonatale smart per terapia intensiva pediatrica.</p></div>
-          </div>
+    </div>
+
+    <div id="p-mad" class="sol-panel fade-up">
+      <div class="sol-2col">
+        <div class="sol-text">
+          <h3>Made in AB Medica</h3>
+          <p>Prodotti sviluppati internamente: soluzioni proprietarie innovative pensate per rispondere alle esigenze specifiche del sistema sanitario italiano con qualità e affidabilità certificate.</p>
+          <ul class="feat-list">
+            <li>Progettazione e sviluppo in Italia</li>
+            <li>Certificazioni CE e FDA</li>
+            <li>Integrazione con sistemi ospedalieri</li>
+            <li>Supporto tecnico dedicato post-vendita</li>
+          </ul>
+          <a href="#made" class="btn-navy">Vedi tutti i prodotti</a>
+        </div>
+        <div class="sol-cards">
+          <div class="scard tilt"><div class="scard-ico">🌊</div><h4>Dolphin</h4><p>Ecografia portabile ad alta risoluzione per diagnosi bedside.</p></div>
+          <div class="scard tilt"><div class="scard-ico">🔭</div><h4>Microlap</h4><p>Sistema endoscopico mininvasivo di nuova generazione per chirurgia ambulatoriale.</p></div>
+          <div class="scard tilt"><div class="scard-ico">🤝</div><h4>Sam</h4><p>Smart Assistance Module per la gestione intelligente del paziente in degenza.</p></div>
+          <div class="scard tilt"><div class="scard-ico">🧬</div><h4>Nessy</h4><p>Sistema di monitoraggio neonatale smart per terapia intensiva pediatrica.</p></div>
         </div>
       </div>
-      <!-- Brand Distribuiti -->
-      <div class="st-panel" data-panel="brand">
-        <div class="st-panel-grid">
-          <div class="st-panel-text">
-            <h3>Brand Distribuiti</h3>
-            <p>Siamo il ponte tra le migliori aziende medicali del mondo e il sistema sanitario italiano. Oltre 30 brand internazionali di riferimento, selezionati per qualità, innovazione e impatto clinico dimostrato.</p>
-            <ul class="st-features">
-              <li><span class="sf-dot"></span>Selezione rigorosa basata su evidence clinica</li>
-              <li><span class="sf-dot"></span>Supporto pre e post vendita completo</li>
-              <li><span class="sf-dot"></span>Formazione tecnica specializzata</li>
-              <li><span class="sf-dot"></span>Rete di service capillare nazionale</li>
-            </ul>
-            <a href="#brand" class="btn btn-navy">Vedi tutti i brand</a>
-          </div>
-          <div class="st-panel-cards">
-            <div class="st-card"><div class="stc-icon">🏆</div><h4>Stryker</h4><p>Leader mondiale in ortopedia, endoscopia e prodotti per emergenza medica.</p></div>
-            <div class="st-card"><div class="stc-icon">🎯</div><h4>Accuray</h4><p>Soluzioni avanzate di radioterapia: CyberKnife e TomoTherapy.</p></div>
-            <div class="st-card"><div class="stc-icon">♀️</div><h4>Cooper Surgical</h4><p>Dispositivi per la salute della donna, fertilità e chirurgia ginecologica.</p></div>
-            <div class="st-card"><div class="stc-icon">🔬</div><h4>CONMED</h4><p>Dispositivi per chirurgia endoscopica, ortopedia e chirurgia generale.</p></div>
-          </div>
+    </div>
+
+    <div id="p-bra" class="sol-panel fade-up">
+      <div class="sol-2col">
+        <div class="sol-text">
+          <h3>Brand Distribuiti</h3>
+          <p>Siamo il ponte tra i migliori brand medicali internazionali e il sistema sanitario italiano. Oltre 30 partner selezionati per qualità, innovazione e impatto clinico dimostrato.</p>
+          <ul class="feat-list">
+            <li>Selezione rigorosa basata su evidence clinica</li>
+            <li>Supporto pre e post vendita completo</li>
+            <li>Formazione tecnica specializzata</li>
+            <li>Rete di service capillare nazionale</li>
+          </ul>
+          <a href="#brand" class="btn-navy">Vedi tutti i brand</a>
+        </div>
+        <div class="sol-cards">
+          <div class="scard tilt"><div class="scard-ico">🏆</div><h4>Stryker</h4><p>Leader mondiale in ortopedia, endoscopia e prodotti per emergenza medica.</p></div>
+          <div class="scard tilt"><div class="scard-ico">🎯</div><h4>Accuray</h4><p>Soluzioni avanzate di radioterapia: CyberKnife e TomoTherapy.</p></div>
+          <div class="scard tilt"><div class="scard-ico">♀️</div><h4>Cooper Surgical</h4><p>Dispositivi per la salute della donna, fertilità e chirurgia ginecologica.</p></div>
+          <div class="scard tilt"><div class="scard-ico">🔬</div><h4>CONMED</h4><p>Dispositivi per chirurgia endoscopica, ortopedia e chirurgia generale.</p></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ======= DIGITAL HEALTH ======= -->
-<section class="section dh-section" id="digital-health">
-  <div class="container">
-    <div class="dh-grid">
-      <div class="dh-text reveal">
-        <span class="section-tag">Digital Health</span>
-        <h2 class="section-title">Un ecosistema<br/><span class="accent">sanitario connesso</span></h2>
+<!-- ===== DIGITAL HEALTH ===== -->
+<section id="digital-health" class="sec bg-white">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="col-text fade-up">
+        <span class="tag">Digital Health</span>
+        <h2>Un ecosistema<br><span class="c-lime">sanitario connesso</span></h2>
         <p>Integrare ospedali, servizi territoriali e assistenza domiciliare in un unico ecosistema capace di assicurare un modello di cura diffusa. È questa la visione di AB Medica per la sanità del futuro.</p>
-        <div class="dh-features">
-          <div class="dhf-item">
-            <div class="dhf-num">01</div>
-            <div>
-              <strong>Telecardiologia H24</strong>
-              <p>ECG da remoto con refertazione immediata da specialista cardiologico certificato.</p>
-            </div>
-          </div>
-          <div class="dhf-item">
-            <div class="dhf-num">02</div>
-            <div>
-              <strong>Monitoraggio Remoto</strong>
-              <p>Gestione continua dei parametri vitali per pazienti cronici a domicilio.</p>
-            </div>
-          </div>
-          <div class="dhf-item">
-            <div class="dhf-num">03</div>
-            <div>
-              <strong>Teleabilitazione</strong>
-              <p>Percorsi riabilitativi a distanza con monitoraggio real-time dei progressi.</p>
-            </div>
-          </div>
-          <div class="dhf-item">
-            <div class="dhf-num">04</div>
-            <div>
-              <strong>Centro Clinico 24/7</strong>
-              <p>Team di professionisti sanitari qualificati sempre disponibile in Italia.</p>
-            </div>
-          </div>
+        <div class="num-list">
+          <div class="nl"><div class="nl-n">01</div><div><strong>Telecardiologia H24</strong><p>ECG da remoto con refertazione immediata da specialista certificato.</p></div></div>
+          <div class="nl"><div class="nl-n">02</div><div><strong>Monitoraggio Remoto</strong><p>Gestione continua parametri vitali per pazienti cronici a domicilio.</p></div></div>
+          <div class="nl"><div class="nl-n">03</div><div><strong>Teleabilitazione</strong><p>Percorsi riabilitativi a distanza con monitoraggio real-time dei progressi.</p></div></div>
+          <div class="nl"><div class="nl-n">04</div><div><strong>Centro Clinico 24/7</strong><p>Team di professionisti sanitari qualificati sempre disponibile in Italia.</p></div></div>
         </div>
-        <a href="#contatti" class="btn btn-lime">Richiedi una Demo</a>
+        <a href="#contatti" class="btn-primary">Richiedi una Demo</a>
       </div>
-      <div class="dh-visual reveal">
-        <div class="dh-lottie-wrap">
-          <lottie-player
-            src="https://assets2.lottiefiles.com/packages/lf20_5tl1xxnz.json"
-            background="transparent" speed="1" loop autoplay
-            style="width:100%;max-width:320px;margin:0 auto 24px;display:block;">
-          </lottie-player>
-        </div>
-        <div class="dh-phone">
-          <div class="dh-phone-inner">
-            <div class="dh-phone-header">
-              <span>MAIA Platform</span>
-              <div class="dh-status"><span class="dh-pulse"></span>Live</div>
+      <div class="col-visual fade-up">
+        <div class="mockup">
+          <div class="mockup-hd"><span class="mockup-title">MAIA Platform</span><span class="live-dot"><span></span>Live</span></div>
+          <div class="mockup-body">
+            <div class="metric"><span class="m-lbl">Frequenza Cardiaca</span><span class="m-val">72 <small>bpm</small></span><div class="m-bar"><div class="m-fill" style="width:72%"></div></div></div>
+            <div class="metric"><span class="m-lbl">Pressione Sistolica</span><span class="m-val">120 <small>mmHg</small></span><div class="m-bar"><div class="m-fill" style="width:60%"></div></div></div>
+            <div class="metric"><span class="m-lbl">SpO2</span><span class="m-val">98 <small>%</small></span><div class="m-bar"><div class="m-fill m-ok" style="width:98%"></div></div></div>
+            <div class="ecg-wrap">
+              <svg viewBox="0 0 300 50" fill="none"><polyline points="0,25 20,25 30,8 40,42 50,25 80,25 90,12 100,38 110,25 140,25 150,4 160,46 170,25 200,25 210,15 220,35 230,25 260,25 270,8 280,42 290,25 300,25" stroke="#C9ED08" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <div class="dh-phone-content">
-              <div class="dh-metric">
-                <span class="dh-m-label">Frequenza Cardiaca</span>
-                <span class="dh-m-val">72 <small>bpm</small></span>
-                <div class="dh-m-bar"><div class="dh-m-fill" style="width:72%"></div></div>
-              </div>
-              <div class="dh-metric">
-                <span class="dh-m-label">Pressione Sistolica</span>
-                <span class="dh-m-val">120 <small>mmHg</small></span>
-                <div class="dh-m-bar"><div class="dh-m-fill" style="width:60%"></div></div>
-              </div>
-              <div class="dh-metric">
-                <span class="dh-m-label">SpO2</span>
-                <span class="dh-m-val">98 <small>%</small></span>
-                <div class="dh-m-bar"><div class="dh-m-fill ok" style="width:98%"></div></div>
-              </div>
-              <div class="dh-ecg">
-                <svg viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <polyline points="0,30 30,30 40,10 50,50 60,30 90,30 100,15 110,45 120,30 150,30 160,5 170,55 180,30 210,30 220,20 230,40 240,30 270,30 280,10 290,50 300,30" stroke="#C9ED08" stroke-width="2" fill="none"/>
-                </svg>
-              </div>
-              <div class="dh-patients">
-                <div class="dh-p-item"><div class="dh-avatar"></div><div><strong>Mario R.</strong><small>Monitoraggio attivo</small></div><span class="dh-ok">✓</span></div>
-                <div class="dh-p-item"><div class="dh-avatar dh-avatar--2"></div><div><strong>Lucia M.</strong><small>ECG in attesa</small></div><span class="dh-warn">!</span></div>
-              </div>
+            <div class="patients">
+              <div class="pat"><div class="av av1"></div><div><strong>Mario R.</strong><small>Monitoraggio attivo</small></div><span class="ok-dot">✓</span></div>
+              <div class="pat"><div class="av av2"></div><div><strong>Lucia M.</strong><small>ECG in attesa</small></div><span class="warn-dot">!</span></div>
             </div>
           </div>
         </div>
@@ -577,561 +406,253 @@
   </div>
 </section>
 
-<!-- ======= ROBOTICA ======= -->
-<section class="section robotica-section" id="robotica">
-  <div class="container">
-    <div class="section-header reveal">
-      <lottie-player
-        src="https://assets6.lottiefiles.com/packages/lf20_uwR49r.json"
-        background="transparent" speed="0.8" loop autoplay
-        style="width:120px;height:120px;margin:0 auto 8px;">
-      </lottie-player>
-      <span class="section-tag">Chirurgia Robotica</span>
-      <h2 class="section-title">Precisione <span class="accent">assoluta</span><br/>in sala operatoria</h2>
-      <p class="section-desc">I sistemi robotici più avanzati al mondo, portati nelle sale operatorie italiane da AB Medica.</p>
+<!-- ===== ROBOTICA ===== -->
+<section id="robotica" class="sec bg-light" style="padding-bottom:80px">
+  <div class="wrap">
+    <div class="sec-hd fade-up">
+      <span class="tag">Chirurgia Robotica</span>
+      <h2>Precisione <span class="c-lime">assoluta</span><br>in sala operatoria</h2>
+      <p>I sistemi robotici più avanzati al mondo, portati in Italia da AB Medica.</p>
     </div>
     <div class="robot-grid">
-      <div class="robot-card reveal" data-delay="0">
-        <div class="rc-num">01</div>
-        <div class="rc-tag">Chirurgia Mininvasiva</div>
-        <h3>da Vinci</h3>
-        <p>Il sistema chirurgico robotico più diffuso al mondo. Permette interventi laparoscopici con precisione e controllo superiori, riduzione del trauma chirurgico e recupero accelerato.</p>
-        <div class="rc-specs">
-          <span>Intuitive Surgical</span>
-          <span>FDA Cleared</span>
-          <span>4000+ sistemi in Europa</span>
-        </div>
-        <a href="#contatti" class="rc-link">Scopri di più →</a>
-      </div>
-      <div class="robot-card reveal" data-delay="100">
-        <div class="rc-num">02</div>
-        <div class="rc-tag">Radiosurgery</div>
-        <h3>CyberKnife</h3>
-        <p>Sistema di radiosurgery robotica per il trattamento non invasivo di tumori in tutto il corpo. Precisione submillimetrica con tracking real-time del tumore in movimento.</p>
-        <div class="rc-specs">
-          <span>Accuray</span>
-          <span>Stereotassico</span>
-          <span>6000+ tumori trattati</span>
-        </div>
-        <a href="#contatti" class="rc-link">Scopri di più →</a>
-      </div>
-      <div class="robot-card rc-featured reveal" data-delay="200">
-        <div class="rc-num">03</div>
-        <div class="rc-tag">Ortopedia Robotica</div>
-        <h3>Mako</h3>
-        <p>La robotica ortopedica di Stryker per protesi di ginocchio e anca. Piano chirurgico 3D personalizzato, controllo haptico real-time e risultati clinici superiori documentati.</p>
-        <div class="rc-specs">
-          <span>Stryker</span>
-          <span>3D Planning</span>
-          <span>98% soddisfazione paziente</span>
-        </div>
-        <a href="#contatti" class="rc-link">Scopri di più →</a>
-      </div>
-      <div class="robot-card reveal" data-delay="300">
-        <div class="rc-num">04</div>
-        <div class="rc-tag">Urologia Robotica</div>
-        <h3>AquaBeam</h3>
-        <p>Ablazione robotica della prostata con acqua ad alta pressione. Guidato da imaging ecografico intraoperatorio, preserva la funzione sessuale e urinaria.</p>
-        <div class="rc-specs">
-          <span>Procept BioRobotics</span>
-          <span>Tissue-selective</span>
-          <span>Preservazione funzionale</span>
-        </div>
-        <a href="#contatti" class="rc-link">Scopri di più →</a>
-      </div>
-      <div class="robot-card reveal" data-delay="400">
-        <div class="rc-num">05</div>
-        <div class="rc-tag">Oncologia Focale</div>
-        <h3>Focal One</h3>
-        <p>Sistema HIFU robotico per il trattamento focale del carcinoma prostatico. Non invasivo, preciso, con pianificazione MRI integrata e minimo impatto sulla qualità di vita.</p>
-        <div class="rc-specs">
-          <span>EDAP TMS</span>
-          <span>MRI Fusion</span>
-          <span>Ambulatoriale</span>
-        </div>
-        <a href="#contatti" class="rc-link">Scopri di più →</a>
-      </div>
-      <div class="robot-card reveal" data-delay="500">
-        <div class="rc-num">06</div>
-        <div class="rc-tag">Microchirurgia</div>
-        <h3>Symani</h3>
-        <p>Sistema robotico per microchirurgia con scaling del movimento 10:1. Permette anastomosi vascolari e nervose con una precisione irraggiungibile a mano libera.</p>
-        <div class="rc-specs">
-          <span>MMI</span>
-          <span>10:1 Motion Scaling</span>
-          <span>Tremor Filtering</span>
-        </div>
-        <a href="#contatti" class="rc-link">Scopri di più →</a>
-      </div>
-      <div class="robot-card reveal" data-delay="600">
-        <div class="rc-num">07</div>
-        <div class="rc-tag">Disinfezione Robotica</div>
-        <h3>LightStrike</h3>
-        <p>Robot di disinfezione a luce pulsata xenon. Elimina il 99,99% di batteri, virus e spore nelle camere di degenza e sale operatorie in pochi minuti.</p>
-        <div class="rc-specs">
-          <span>Xenex</span>
-          <span>Pulsed Xenon UV</span>
-          <span>HAI Prevention</span>
-        </div>
-        <a href="#contatti" class="rc-link">Scopri di più →</a>
-      </div>
+      <div class="rcard tilt fade-up" data-delay="0"><div class="rcard-tag">Chirurgia Mininvasiva</div><div class="rcard-num">01</div><h3>da Vinci</h3><p>Il sistema chirurgico robotico più diffuso al mondo. Interventi laparoscopici con precisione superiore, trauma ridotto e recupero accelerato.</p><div class="rcard-chips"><span>Intuitive Surgical</span><span>FDA Cleared</span></div><a href="#contatti">Scopri →</a></div>
+      <div class="rcard tilt fade-up" data-delay="100"><div class="rcard-tag">Radiosurgery</div><div class="rcard-num">02</div><h3>CyberKnife</h3><p>Radiosurgery robotica per il trattamento non invasivo di tumori in tutto il corpo con precisione submillimetrica.</p><div class="rcard-chips"><span>Accuray</span><span>Stereotassico</span></div><a href="#contatti">Scopri →</a></div>
+      <div class="rcard rcard-feat tilt fade-up" data-delay="200"><div class="rcard-tag">Ortopedia Robotica</div><div class="rcard-num">03</div><h3>Mako</h3><p>Robotica Stryker per protesi di ginocchio e anca. Piano chirurgico 3D personalizzato, controllo haptico e risultati clinici superiori.</p><div class="rcard-chips"><span>Stryker</span><span>3D Planning</span></div><a href="#contatti">Scopri →</a></div>
+      <div class="rcard tilt fade-up" data-delay="300"><div class="rcard-tag">Urologia Robotica</div><div class="rcard-num">04</div><h3>AquaBeam</h3><p>Ablazione robotica della prostata con acqua ad alta pressione. Preserva la funzione sessuale e urinaria.</p><div class="rcard-chips"><span>Procept</span><span>Tissue-selective</span></div><a href="#contatti">Scopri →</a></div>
+      <div class="rcard tilt fade-up" data-delay="400"><div class="rcard-tag">Oncologia Focale</div><div class="rcard-num">05</div><h3>Focal One</h3><p>HIFU robotico per trattamento focale del carcinoma prostatico. Non invasivo, preciso, con pianificazione MRI integrata.</p><div class="rcard-chips"><span>EDAP TMS</span><span>MRI Fusion</span></div><a href="#contatti">Scopri →</a></div>
+      <div class="rcard tilt fade-up" data-delay="500"><div class="rcard-tag">Microchirurgia</div><div class="rcard-num">06</div><h3>Symani</h3><p>Sistema robotico per microchirurgia con scaling del movimento 10:1. Anastomosi vascolari con precisione irraggiungibile a mano libera.</p><div class="rcard-chips"><span>MMI</span><span>10:1 Scaling</span></div><a href="#contatti">Scopri →</a></div>
+      <div class="rcard tilt fade-up" data-delay="600"><div class="rcard-tag">Disinfezione Robotica</div><div class="rcard-num">07</div><h3>LightStrike</h3><p>Robot UV a luce pulsata xenon. Elimina il 99,99% di batteri, virus e spore nelle sale operatorie in pochi minuti.</p><div class="rcard-chips"><span>Xenex</span><span>HAI Prevention</span></div><a href="#contatti">Scopri →</a></div>
     </div>
   </div>
 </section>
 
-<!-- ======= AZIENDA / ABOUT ======= -->
-<section class="section about-section" id="azienda">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-left reveal">
-        <span class="section-tag">Chi Siamo</span>
-        <h2 class="section-title">Una storia di<br/><span class="accent">eccellenza</span> dal 1984</h2>
-        <p>AB Medica è il partner italiano di riferimento per l'innovazione tecnica e tecnologica in sanità. Dal 1984 selezioniamo, distribuiamo e sviluppiamo tecnologie all'avanguardia per ospedali, cliniche e professionisti sanitari di tutta Italia.</p>
-        <p>La nostra filosofia si riassume in tre parole: <strong>Dalle persone. Con le persone. Per le persone.</strong> Ogni tecnologia che portiamo sul mercato italiano ha come unico obiettivo il miglioramento della qualità della cura.</p>
-        <div class="about-vals">
-          <div class="av-item"><div class="av-dot"></div><span>Coraggio di esplorare e innovare</span></div>
-          <div class="av-item"><div class="av-dot"></div><span>Competenza tecnica e passione</span></div>
-          <div class="av-item"><div class="av-dot"></div><span>Cura inclusiva e sostenibile</span></div>
-          <div class="av-item"><div class="av-dot"></div><span>Supporto a professionisti e strutture</span></div>
+<!-- ===== AZIENDA ===== -->
+<section id="azienda" class="sec bg-white">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="col-text fade-up">
+        <span class="tag">Chi Siamo</span>
+        <h2>Una storia di<br><span class="c-lime">eccellenza</span> dal 1984</h2>
+        <p>AB Medica è il partner italiano di riferimento per l'innovazione tecnica e tecnologica in sanità. Dal 1984 selezioniamo, distribuiamo e sviluppiamo tecnologie all'avanguardia per ospedali, cliniche e professionisti di tutta Italia.</p>
+        <p>La nostra filosofia: <strong>Dalle persone. Con le persone. Per le persone.</strong></p>
+        <div class="val-grid">
+          <div class="val"><div class="val-dot"></div>Coraggio e innovazione</div>
+          <div class="val"><div class="val-dot"></div>Competenza e passione</div>
+          <div class="val"><div class="val-dot"></div>Cura inclusiva e sostenibile</div>
+          <div class="val"><div class="val-dot"></div>Supporto dedicato</div>
         </div>
-        <a href="#contatti" class="btn btn-lime">Contattaci</a>
+        <a href="#contatti" class="btn-primary">Contattaci</a>
       </div>
-      <div class="about-right reveal">
+      <div class="col-visual fade-up">
         <div class="timeline">
-          <div class="tl-item">
-            <div class="tl-year">1984</div>
-            <div class="tl-body">
-              <h4>Fondazione</h4>
-              <p>AB Medica nasce a Cerro Maggiore con la missione di portare innovazione nella sanità italiana.</p>
-            </div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-year">2000</div>
-            <div class="tl-body">
-              <h4>Espansione</h4>
-              <p>Accordi con i principali brand internazionali. Nasce il primo network di distribuzione nazionale.</p>
-            </div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-year">2010</div>
-            <div class="tl-body">
-              <h4>Robotica</h4>
-              <p>Inizio della distribuzione di sistemi robotici chirurgici in Italia. Partnership con Intuitive Surgical.</p>
-            </div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-year">2018</div>
-            <div class="tl-body">
-              <h4>Digital Health</h4>
-              <p>Lancio della piattaforma MAIA per la connected care. Nascita del ramo Digital Health.</p>
-            </div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-year">2026</div>
-            <div class="tl-body">
-              <h4>Leader dell'Innovazione</h4>
-              <p>Premiati dal Corriere della Sera. Closing con Intuitive Surgical per da Vinci in Italia.</p>
-            </div>
-          </div>
+          <div class="tl"><div class="tl-y">1984</div><div class="tl-b"><strong>Fondazione</strong><p>AB Medica nasce a Cerro Maggiore con la missione di portare innovazione nella sanità italiana.</p></div></div>
+          <div class="tl"><div class="tl-y">2000</div><div class="tl-b"><strong>Espansione</strong><p>Accordi con i principali brand internazionali. Nasce il primo network di distribuzione nazionale.</p></div></div>
+          <div class="tl"><div class="tl-y">2010</div><div class="tl-b"><strong>Robotica</strong><p>Inizio distribuzione sistemi robotici in Italia. Partnership con Intuitive Surgical per da Vinci.</p></div></div>
+          <div class="tl"><div class="tl-y">2018</div><div class="tl-b"><strong>Digital Health</strong><p>Lancio di MAIA per la connected care. Nasce il ramo Digital Health.</p></div></div>
+          <div class="tl"><div class="tl-y">2026</div><div class="tl-b"><strong>Leader dell'Innovazione</strong><p>Premiati dal Corriere della Sera. Closing con Intuitive Surgical per da Vinci in Italia.</p></div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ======= INNOVATION HUB ======= -->
-<section class="section inno-section" id="innovation">
-  <div class="inno-bg"></div>
-  <div class="container">
-    <div class="inno-grid">
-      <div class="inno-text reveal">
-        <span class="section-tag light">Innovation Hub</span>
-        <h2 class="section-title white">Think and made:<br/><span class="accent">innovare per migliorare</span><br/><span class="white">la qualità della vita</span></h2>
-        <p class="white-p">Il nostro Innovation Hub è il cuore pulsante della ricerca e sviluppo. Collaboriamo con università, ospedali e startup per portare le tecnologie di domani al letto del paziente oggi.</p>
-        <div class="inno-areas">
-          <div class="ia-item">
-            <div class="ia-icon">🔬</div>
-            <div>
-              <strong>Ricerca Scientifica</strong>
-              <p>Collaborazioni annuali con università e centri di ricerca italiani e internazionali per sviluppare nuove tecnologie.</p>
-            </div>
-          </div>
-          <div class="ia-item">
-            <div class="ia-icon">⚙️</div>
-            <div>
-              <strong>Sviluppo Multidisciplinare</strong>
-              <p>Team di ingegneri, medici e designer che lavorano insieme per creare tecnologie interconnesse e innovative.</p>
-            </div>
-          </div>
-          <div class="ia-item">
-            <div class="ia-icon">🇪🇺</div>
-            <div>
-              <strong>Progetti Finanziati EU</strong>
-              <p>Partecipazione a programmi comunitari europei per la ricerca e lo sviluppo di tecnologie mediche avanzate.</p>
-            </div>
-          </div>
-          <div class="ia-item">
-            <div class="ia-icon">🤖</div>
-            <div>
-              <strong>AI & Machine Learning</strong>
-              <p>Algoritmi predittivi per diagnosi precoce, ottimizzazione dei percorsi clinici e medicina di precisione.</p>
-            </div>
-          </div>
+<!-- ===== INNOVATION HUB ===== -->
+<section id="innovation" class="sec bg-navy">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="col-text fade-up">
+        <span class="tag tag-light">Innovation Hub</span>
+        <h2 class="c-white">Think and made:<br><span class="c-lime">innovare per migliorare</span><br><span class="c-white">la qualità della vita</span></h2>
+        <p class="p-light">Il nostro Innovation Hub collabora con università, ospedali e startup per portare le tecnologie di domani al letto del paziente oggi.</p>
+        <div class="inno-list">
+          <div class="il"><div class="il-ico">🔬</div><div><strong>Ricerca Scientifica</strong><p>Collaborazioni annuali con università e centri di ricerca italiani e internazionali.</p></div></div>
+          <div class="il"><div class="il-ico">⚙️</div><div><strong>Sviluppo Multidisciplinare</strong><p>Ingegneri, medici e designer che creano tecnologie interconnesse e innovative.</p></div></div>
+          <div class="il"><div class="il-ico">🇪🇺</div><div><strong>Progetti EU</strong><p>Partecipazione a programmi comunitari europei per la ricerca medicale avanzata.</p></div></div>
+          <div class="il"><div class="il-ico">🤖</div><div><strong>AI & Machine Learning</strong><p>Algoritmi predittivi per diagnosi precoce e medicina di precisione.</p></div></div>
         </div>
-        <a href="#contatti" class="btn btn-lime">Esplora l'Innovation Hub</a>
+        <a href="#contatti" class="btn-primary">Esplora l'Innovation Hub</a>
       </div>
-      <div class="inno-visual reveal" style="position:relative">
-        <lottie-player
-          src="https://assets5.lottiefiles.com/packages/lf20_qp1q7mct.json"
-          background="transparent" speed="0.7" loop autoplay
-          style="position:absolute;inset:0;width:100%;height:100%;opacity:0.18;pointer-events:none;z-index:0">
-        </lottie-player>
-        <div class="inno-orb inno-orb-1"></div>
-        <div class="inno-orb inno-orb-2"></div>
-        <div class="inno-orb inno-orb-3"></div>
-        <div class="inno-orb inno-orb-4"></div>
-        <div class="inno-core-wrap">
-          <div class="inno-core-ring"></div>
-          <div class="inno-core-ring inno-core-ring-2"></div>
-          <div class="inno-core-ring inno-core-ring-3"></div>
-          <div class="inno-core-center">
-            <span>INNOVATION</span>
-            <small>HUB</small>
-          </div>
+      <div class="col-visual fade-up">
+        <div class="orb-wrap">
+          <div class="orb orb1"></div>
+          <div class="orb orb2"></div>
+          <div class="orb orb3"></div>
+          <div class="orb orb4"></div>
+          <div class="orb-core"><span>INNOVATION</span><small>HUB</small></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ======= FORMAZIONE ======= -->
-<section class="section form-section" id="formazione">
-  <div class="container">
-    <div class="form-grid">
-      <div class="form-visual reveal">
-        <div class="fv-card fv-card-1">
-          <div class="fvc-icon">🎓</div>
-          <h4>Training & Simulation Center</h4>
-          <p>Centro di formazione avanzata con simulatori chirurgici all'avanguardia</p>
-          <div class="fvc-stat"><span>500+</span> medici formati/anno</div>
-        </div>
-        <div class="fv-card fv-card-2">
-          <div class="fvc-icon">🏆</div>
-          <h4>Certificazioni Internazionali</h4>
-          <p>Programmi riconosciuti da Intuitive Surgical, Stryker e Accuray</p>
-          <div class="fvc-stat"><span>20+</span> corsi attivi</div>
-        </div>
-        <div class="fv-card fv-card-3">
-          <div class="fvc-icon">📡</div>
-          <h4>Live Surgery & Webinar</h4>
-          <p>Sessioni di formazione live con chirurghi esperti da tutta Italia</p>
-          <div class="fvc-stat"><span>100+</span> eventi/anno</div>
+<!-- ===== FORMAZIONE ===== -->
+<section id="formazione" class="sec bg-light">
+  <div class="wrap">
+    <div class="two-col two-col-rev">
+      <div class="col-visual fade-up">
+        <div class="form-cards">
+          <div class="fc tilt"><div class="fc-ico">🎓</div><h4>Training & Simulation Center</h4><p>Centro di formazione avanzata con simulatori chirurgici all'avanguardia</p><span class="fc-stat"><b>500+</b> medici formati/anno</span></div>
+          <div class="fc tilt"><div class="fc-ico">🏆</div><h4>Certificazioni Internazionali</h4><p>Programmi riconosciuti da Intuitive Surgical, Stryker e Accuray</p><span class="fc-stat"><b>20+</b> corsi attivi</span></div>
+          <div class="fc tilt"><div class="fc-ico">📡</div><h4>Live Surgery & Webinar</h4><p>Sessioni live con chirurghi esperti da tutta Italia</p><span class="fc-stat"><b>100+</b> eventi/anno</span></div>
         </div>
       </div>
-      <div class="form-text reveal">
-        <span class="section-tag">Formazione</span>
-        <h2 class="section-title">Training &<br/><span class="accent">Simulation Center</span></h2>
-        <p>Formare i professionisti sanitari è parte integrante della nostra missione. Il Training & Simulation Center di AB Medica è un centro di eccellenza dedicato alla formazione continua su tutte le tecnologie che distribuiamo.</p>
-        <div class="form-courses">
-          <div class="fc-item"><span class="fc-dot"></span>Chirurgia Robotica — da Vinci Curriculum</div>
-          <div class="fc-item"><span class="fc-dot"></span>Radioterapia Avanzata — CyberKnife</div>
-          <div class="fc-item"><span class="fc-dot"></span>Robotica Ortopedica — Mako System</div>
-          <div class="fc-item"><span class="fc-dot"></span>Digital Health & Telemedicina</div>
-          <div class="fc-item"><span class="fc-dot"></span>ECM — Educazione Medica Continua</div>
-        </div>
-        <a href="#contatti" class="btn btn-lime">Iscriviti ai Corsi</a>
+      <div class="col-text fade-up">
+        <span class="tag">Formazione</span>
+        <h2>Training &<br><span class="c-lime">Simulation Center</span></h2>
+        <p>Il Training & Simulation Center di AB Medica è un centro di eccellenza per la formazione continua su tutte le tecnologie che distribuiamo.</p>
+        <ul class="feat-list">
+          <li>Chirurgia Robotica — da Vinci Curriculum</li>
+          <li>Radioterapia Avanzata — CyberKnife</li>
+          <li>Robotica Ortopedica — Mako System</li>
+          <li>Digital Health & Telemedicina</li>
+          <li>ECM — Educazione Medica Continua</li>
+        </ul>
+        <a href="#contatti" class="btn-primary">Iscriviti ai Corsi</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ======= BRAND DISTRIBUITI ======= -->
-<section class="section brand-section" id="brand">
-  <div class="container">
-    <div class="section-header reveal">
-      <lottie-player
-        src="https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json"
-        background="transparent" speed="1" loop autoplay
-        style="width:100px;height:100px;margin:0 auto 8px;">
-      </lottie-player>
-      <span class="section-tag">I nostri Partner</span>
-      <h2 class="section-title">30+ Brand di <span class="accent">Eccellenza</span></h2>
-      <p class="section-desc">Selezioniamo i migliori partner internazionali per portare in Italia le tecnologie medicali più avanzate.</p>
+<!-- ===== BRAND ===== -->
+<section id="brand" class="sec bg-navy">
+  <div class="wrap">
+    <div class="sec-hd fade-up">
+      <span class="tag tag-light">I nostri Partner</span>
+      <h2 class="c-white">30+ Brand di <span class="c-lime">Eccellenza</span></h2>
+      <p style="color:rgba(255,255,255,.5)">I migliori partner internazionali per la tecnologia medicale in Italia.</p>
     </div>
   </div>
-  <div class="brand-marquee-wrap">
-    <div class="brand-marquee">
-      <div class="bm-track">
-        <div class="bm-item"><span>Stryker</span></div>
-        <div class="bm-item"><span>Intuitive Surgical</span></div>
-        <div class="bm-item"><span>Accuray</span></div>
-        <div class="bm-item"><span>Cooper Surgical</span></div>
-        <div class="bm-item"><span>CONMED</span></div>
-        <div class="bm-item"><span>Varian Medical</span></div>
-        <div class="bm-item"><span>Procept BioRobotics</span></div>
-        <div class="bm-item"><span>Merit Medical</span></div>
-        <div class="bm-item"><span>EDAP TMS</span></div>
-        <div class="bm-item"><span>MMI — Symani</span></div>
-        <div class="bm-item"><span>Xenex</span></div>
-        <div class="bm-item"><span>Focal One</span></div>
-        <div class="bm-item"><span>Stryker</span></div>
-        <div class="bm-item"><span>Intuitive Surgical</span></div>
-        <div class="bm-item"><span>Accuray</span></div>
-        <div class="bm-item"><span>Cooper Surgical</span></div>
-        <div class="bm-item"><span>CONMED</span></div>
-        <div class="bm-item"><span>Varian Medical</span></div>
-        <div class="bm-item"><span>Procept BioRobotics</span></div>
-        <div class="bm-item"><span>Merit Medical</span></div>
-        <div class="bm-item"><span>EDAP TMS</span></div>
-        <div class="bm-item"><span>MMI — Symani</span></div>
-        <div class="bm-item"><span>Xenex</span></div>
-        <div class="bm-item"><span>Focal One</span></div>
-      </div>
-    </div>
+  <div class="marquee-wrap">
+    <div class="marquee"><div class="mq-track">
+      <span>Stryker</span><span>Intuitive Surgical</span><span>Accuray</span><span>Cooper Surgical</span><span>CONMED</span><span>Varian Medical</span><span>Procept BioRobotics</span><span>Merit Medical</span><span>EDAP TMS</span><span>MMI Symani</span><span>Xenex</span><span>Focal One</span>
+      <span>Stryker</span><span>Intuitive Surgical</span><span>Accuray</span><span>Cooper Surgical</span><span>CONMED</span><span>Varian Medical</span><span>Procept BioRobotics</span><span>Merit Medical</span><span>EDAP TMS</span><span>MMI Symani</span><span>Xenex</span><span>Focal One</span>
+    </div></div>
   </div>
-  <div class="container">
-    <div class="brand-grid reveal">
-      <div class="bg-card"><div class="bgc-cat">Ortopedia & Trauma</div><ul><li>Stryker</li><li>CONMED</li><li>Merit Medical</li></ul></div>
-      <div class="bg-card"><div class="bgc-cat">Oncologia & Radioterapia</div><ul><li>Accuray — CyberKnife</li><li>Varian Medical Systems</li><li>EDAP TMS — Focal One</li></ul></div>
-      <div class="bg-card"><div class="bgc-cat">Chirurgia Robotica</div><ul><li>Intuitive Surgical — da Vinci</li><li>Procept BioRobotics</li><li>MMI — Symani</li></ul></div>
-      <div class="bg-card"><div class="bgc-cat">Ginecologia & Fertilità</div><ul><li>Cooper Surgical</li><li>Xenex — LightStrike</li></ul></div>
+  <div class="wrap">
+    <div class="brand-4 fade-up">
+      <div class="bcard"><div class="bcard-cat">Ortopedia & Trauma</div><ul><li>Stryker</li><li>CONMED</li><li>Merit Medical</li></ul></div>
+      <div class="bcard"><div class="bcard-cat">Oncologia & Radioterapia</div><ul><li>Accuray — CyberKnife</li><li>Varian Medical Systems</li><li>EDAP TMS — Focal One</li></ul></div>
+      <div class="bcard"><div class="bcard-cat">Chirurgia Robotica</div><ul><li>Intuitive Surgical — da Vinci</li><li>Procept BioRobotics</li><li>MMI — Symani</li></ul></div>
+      <div class="bcard"><div class="bcard-cat">Ginecologia & Fertilità</div><ul><li>Cooper Surgical</li><li>Xenex — LightStrike</li></ul></div>
     </div>
   </div>
 </section>
 
-<!-- ======= IL FUTURO DELLA SANITÀ ======= -->
-<section class="section futuro-section" id="futuro">
-  <div class="container">
-    <div class="futuro-inner reveal">
+<!-- ===== IL FUTURO ===== -->
+<section id="futuro" class="sec bg-white">
+  <div class="wrap">
+    <div class="futuro-grid fade-up">
       <div class="futuro-text">
-        <span class="section-tag">Vision 2030</span>
-        <h2 class="section-title">Il Futuro<br/>della <span class="accent">Sanità</span></h2>
-        <p>La sanità del futuro è connessa, predittiva, personalizzata e accessibile. AB Medica lavora oggi per costruire l'ecosistema sanitario di domani, portando in Italia le tecnologie più avanzate del mondo.</p>
-        <a href="#contatti" class="btn btn-lime">Scopri la visione</a>
+        <span class="tag">Vision 2030</span>
+        <h2>Il Futuro<br>della <span class="c-lime">Sanità</span></h2>
+        <p>La sanità del futuro è connessa, predittiva, personalizzata e accessibile. AB Medica lavora oggi per costruire l'ecosistema sanitario di domani.</p>
+        <a href="#contatti" class="btn-primary">Scopri la visione</a>
       </div>
-      <div class="futuro-cards">
-        <div class="fc-card">
-          <div class="fcc-icon">🔮</div>
-          <h4>Medicina Predittiva</h4>
-          <p>AI e big data per prevenire le malattie prima che si manifestino.</p>
+      <div class="futuro-4">
+        <div class="fut-card tilt"><div class="fut-ico">🔮</div><h4>Medicina Predittiva</h4><p>AI e big data per prevenire le malattie prima che si manifestino.</p></div>
+        <div class="fut-card tilt"><div class="fut-ico">🏠</div><h4>Ospedale Diffuso</h4><p>Cure di qualità ospedaliera direttamente a casa del paziente.</p></div>
+        <div class="fut-card tilt"><div class="fut-ico">🧬</div><h4>Medicina di Precisione</h4><p>Terapie personalizzate basate sul profilo genetico del paziente.</p></div>
+        <div class="fut-card tilt"><div class="fut-ico">♻️</div><h4>Sanità Sostenibile</h4><p>Tecnologie eco-compatibili per un sistema sanitario più verde.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MEDIA CENTER ===== -->
+<section id="media" class="sec bg-light">
+  <div class="wrap">
+    <div class="sec-hd fade-up"><span class="tag">Ultime Novità</span><h2>Media <span class="c-lime">Center</span></h2><p>News, video, podcast e rassegna stampa dal mondo AB Medica.</p></div>
+    <div class="media-tabs fade-up">
+      <button class="mtab active" data-mt="news">📰 News</button>
+      <button class="mtab" data-mt="video">🎬 Video</button>
+      <button class="mtab" data-mt="podcast">🎙️ Podcast</button>
+      <button class="mtab" data-mt="stampa">📋 Rassegna Stampa</button>
+    </div>
+    <div id="mediaGrid" class="media-grid"></div>
+    <div style="text-align:center;margin-top:40px" class="fade-up"><a href="#" class="btn-navy">Vedi tutti i contenuti →</a></div>
+  </div>
+</section>
+
+<!-- ===== ASSISTENZA ===== -->
+<section id="assistenza" class="sec bg-white">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="col-text fade-up">
+        <span class="tag">Supporto Tecnico</span>
+        <h2>Assistenza<br><span class="c-lime">sempre presente</span></h2>
+        <p>Un team dedicato di tecnici specializzati garantisce il funzionamento ottimale di ogni tecnologia con interventi rapidi, manutenzione preventiva e supporto remoto.</p>
+        <div class="assist-feats">
+          <div class="af"><div class="af-ico">⚡</div><div><strong>Intervento Rapido</strong><p>Tempo di risposta garantito per tutte le tecnologie critiche</p></div></div>
+          <div class="af"><div class="af-ico">🔧</div><div><strong>Manutenzione Preventiva</strong><p>Programmi di service per massimizzare uptime e sicurezza</p></div></div>
+          <div class="af"><div class="af-ico">📞</div><div><strong>Supporto Remoto H24</strong><p>Helpdesk tecnico attivo 7 giorni su 7, 365 giorni l'anno</p></div></div>
         </div>
-        <div class="fc-card">
-          <div class="fcc-icon">🏠</div>
-          <h4>Ospedale Diffuso</h4>
-          <p>Cure di qualità ospedaliera direttamente a casa del paziente.</p>
-        </div>
-        <div class="fc-card">
-          <div class="fcc-icon">🧬</div>
-          <h4>Medicina di Precisione</h4>
-          <p>Terapie personalizzate basate sul profilo genetico del paziente.</p>
-        </div>
-        <div class="fc-card">
-          <div class="fcc-icon">♻️</div>
-          <h4>Sanità Sostenibile</h4>
-          <p>Tecnologie eco-compatibili per un sistema sanitario più verde.</p>
+        <a href="#contatti" class="btn-primary">Contatta l'Assistenza</a>
+      </div>
+      <div class="col-visual fade-up">
+        <div class="stat-grid">
+          <div class="stbx tilt"><span class="stbx-n" data-to="98">0</span><span class="stbx-s">%</span><span class="stbx-l">Uptime garantito</span></div>
+          <div class="stbx tilt"><span class="stbx-n" data-to="4">0</span><span class="stbx-s">h</span><span class="stbx-l">Tempo medio intervento</span></div>
+          <div class="stbx tilt"><span class="stbx-n" data-to="150">0</span><span class="stbx-s">+</span><span class="stbx-l">Tecnici specializzati</span></div>
+          <div class="stbx tilt"><span class="stbx-n" data-to="365">0</span><span class="stbx-l">Giorni attivi l'anno</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ======= MEDIA CENTER ======= -->
-<section class="section media-section" id="media">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">Ultime Novità</span>
-      <h2 class="section-title">Media <span class="accent">Center</span></h2>
-      <p class="section-desc">News, video, podcast e rassegna stampa dal mondo AB Medica.</p>
-    </div>
-    <div class="media-tabs reveal">
-      <button class="mtab active" data-mtab="news">📰 News</button>
-      <button class="mtab" data-mtab="video">🎬 Video</button>
-      <button class="mtab" data-mtab="podcast">🎙️ Podcast</button>
-      <button class="mtab" data-mtab="stampa">📋 Rassegna Stampa</button>
-    </div>
-    <div class="media-grid" id="mediaGrid">
-      <!-- populated by JS -->
-    </div>
-    <div class="media-cta reveal">
-      <a href="#" class="btn btn-outline-navy">Vedi tutti i contenuti →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ======= ASSISTENZA ======= -->
-<section class="section assist-section" id="assistenza">
-  <div class="container">
-    <div class="assist-grid">
-      <div class="assist-text reveal">
-        <span class="section-tag">Supporto Tecnico</span>
-        <h2 class="section-title">Assistenza<br/><span class="accent">sempre presente</span></h2>
-        <p>Un team dedicato di tecnici specializzati garantisce il funzionamento ottimale di ogni tecnologia. Interventi rapidi, manutenzione preventiva e supporto remoto per non fermarsi mai.</p>
-        <div class="assist-features">
-          <div class="af-item"><div class="af-icon">⚡</div><div><strong>Intervento Rapido</strong><p>Tempo di risposta garantito per tutte le tecnologie critiche</p></div></div>
-          <div class="af-item"><div class="af-icon">🔧</div><div><strong>Manutenzione Preventiva</strong><p>Programmi di service per massimizzare uptime e sicurezza</p></div></div>
-          <div class="af-item"><div class="af-icon">📞</div><div><strong>Supporto Remoto H24</strong><p>Helpdesk tecnico attivo 7 giorni su 7, 365 giorni l'anno</p></div></div>
-          <div class="af-item"><div class="af-icon">🎓</div><div><strong>Aggiornamento Continuo</strong><p>Formazione tecnica per il personale ospedaliero</p></div></div>
-        </div>
-        <a href="#contatti" class="btn btn-lime">Contatta l'Assistenza</a>
-      </div>
-      <div class="assist-stats reveal">
-        <div class="as-stat"><span class="as-n" data-target="98">0</span><span class="as-pct">%</span><span class="as-l">Uptime garantito</span></div>
-        <div class="as-stat"><span class="as-n" data-target="4">0</span><span class="as-pct">h</span><span class="as-l">Tempo medio intervento</span></div>
-        <div class="as-stat"><span class="as-n" data-target="150">0</span><span class="as-pct">+</span><span class="as-l">Tecnici specializzati</span></div>
-        <div class="as-stat"><span class="as-n" data-target="365">0</span><span class="as-pct"></span><span class="as-l">Giorni l'anno attivi</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======= CONTACT ======= -->
-<section class="section contact-section" id="contatti">
-  <div class="container">
+<!-- ===== CONTATTI ===== -->
+<section id="contatti" class="sec bg-light">
+  <div class="wrap">
     <div class="contact-grid">
-      <div class="contact-left reveal">
-        <span class="section-tag">Parliamo</span>
-        <h2 class="section-title">Contattaci</h2>
-        <p>Siamo a tua disposizione per qualsiasi informazione su prodotti, servizi, formazione e partnership.</p>
-        <div class="contact-info-list">
-          <div class="ci-item">
-            <div class="ci-icon">📍</div>
-            <div><strong>Sede Legale & Operativa</strong><span>Via J.F. Kennedy 10/12, 20023 Cerro Maggiore (MI)</span></div>
-          </div>
-          <div class="ci-item">
-            <div class="ci-icon">📞</div>
-            <div><strong>Centralino</strong><span>+39 02.93305.1</span></div>
-          </div>
-          <div class="ci-item">
-            <div class="ci-icon">✉️</div>
-            <div><strong>Email Generale</strong><span>abmedica@abmedica.it</span></div>
-          </div>
-          <div class="ci-item">
-            <div class="ci-icon">🔧</div>
-            <div><strong>Assistenza Tecnica</strong><span>service@abmedica.it</span></div>
-          </div>
+      <div class="contact-left fade-up">
+        <span class="tag">Parliamo</span>
+        <h2>Contattaci</h2>
+        <p>Siamo a tua disposizione per informazioni su prodotti, servizi, formazione e partnership.</p>
+        <div class="cinfo">
+          <div class="ci"><div class="ci-ico">📍</div><div><strong>Sede</strong><span>Via J.F. Kennedy 10/12, Cerro Maggiore (MI)</span></div></div>
+          <div class="ci"><div class="ci-ico">📞</div><div><strong>Telefono</strong><span>+39 02.93305.1</span></div></div>
+          <div class="ci"><div class="ci-ico">✉️</div><div><strong>Email</strong><span>abmedica@abmedica.it</span></div></div>
+          <div class="ci"><div class="ci-ico">🔧</div><div><strong>Assistenza</strong><span>service@abmedica.it</span></div></div>
         </div>
-        <div class="social-row">
-          <a href="#" class="soc-btn" title="LinkedIn">in</a>
-          <a href="#" class="soc-btn" title="YouTube">▶</a>
-          <a href="#" class="soc-btn" title="Facebook">f</a>
-          <a href="#" class="soc-btn" title="Twitter">𝕏</a>
-          <a href="#" class="soc-btn" title="Spotify">♫</a>
+        <div class="soc-row">
+          <a href="#" class="soc">in</a><a href="#" class="soc">▶</a><a href="#" class="soc">f</a><a href="#" class="soc">𝕏</a><a href="#" class="soc">♫</a>
         </div>
       </div>
-      <div class="contact-right reveal">
-        <form class="contact-form" id="contactForm">
-          <div class="cf-row">
-            <div class="cf-group"><label>Nome *</label><input type="text" placeholder="Mario" required/></div>
-            <div class="cf-group"><label>Cognome *</label><input type="text" placeholder="Rossi" required/></div>
-          </div>
-          <div class="cf-row">
-            <div class="cf-group"><label>Email *</label><input type="email" placeholder="mario.rossi@ospedale.it" required/></div>
-            <div class="cf-group"><label>Telefono</label><input type="tel" placeholder="+39 02 0000000"/></div>
-          </div>
-          <div class="cf-group"><label>Azienda / Struttura</label><input type="text" placeholder="Ospedale / Clinica / Azienda"/></div>
-          <div class="cf-group">
-            <label>Argomento *</label>
-            <select required>
-              <option value="">Seleziona un argomento</option>
-              <option>Informazioni sui Prodotti</option>
-              <option>Richiesta Demo</option>
-              <option>Assistenza Tecnica</option>
-              <option>Formazione</option>
-              <option>Partnership</option>
-              <option>Careers</option>
-              <option>Altro</option>
-            </select>
-          </div>
-          <div class="cf-group"><label>Messaggio *</label><textarea placeholder="Come possiamo aiutarti?" rows="4" required></textarea></div>
-          <div class="cf-privacy">
-            <input type="checkbox" id="privacy" required/>
-            <label for="privacy">Accetto il trattamento dei dati personali ai sensi del GDPR — <a href="#">Privacy Policy</a></label>
-          </div>
-          <button type="submit" class="btn btn-lime full-width">Invia Messaggio</button>
+      <div class="contact-right fade-up">
+        <form id="contactForm" class="cform">
+          <div class="crow"><div class="cg"><label>Nome *</label><input type="text" placeholder="Mario" required/></div><div class="cg"><label>Cognome *</label><input type="text" placeholder="Rossi" required/></div></div>
+          <div class="crow"><div class="cg"><label>Email *</label><input type="email" placeholder="mario@ospedale.it" required/></div><div class="cg"><label>Telefono</label><input type="tel" placeholder="+39 02 000000"/></div></div>
+          <div class="cg"><label>Azienda / Struttura</label><input type="text" placeholder="Ospedale / Clinica"/></div>
+          <div class="cg"><label>Argomento *</label><select required><option value="">Seleziona...</option><option>Informazioni Prodotti</option><option>Demo</option><option>Assistenza Tecnica</option><option>Formazione</option><option>Partnership</option><option>Careers</option><option>Altro</option></select></div>
+          <div class="cg"><label>Messaggio *</label><textarea rows="4" placeholder="Come possiamo aiutarti?" required></textarea></div>
+          <div class="cpriv"><input type="checkbox" id="priv" required/><label for="priv">Accetto il trattamento dei dati — <a href="#">Privacy Policy</a></label></div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center">Invia Messaggio</button>
         </form>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ======= FOOTER ======= -->
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="#home" class="nav-logo"><span class="logo-ab">AB</span><span class="logo-medica">medica</span></a>
-        <p>Il miglior partner per l'innovazione tecnica e tecnologica in sanità. Dal 1984, al servizio della salute italiana.</p>
-        <p class="ft-reg">Registro Imprese n° 08862820969 — P.IVA 08862820969</p>
-        <div class="social-row">
-          <a href="#" class="soc-btn soc-sm">in</a>
-          <a href="#" class="soc-btn soc-sm">▶</a>
-          <a href="#" class="soc-btn soc-sm">f</a>
-          <a href="#" class="soc-btn soc-sm">𝕏</a>
-          <a href="#" class="soc-btn soc-sm">♫</a>
-        </div>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <a href="#home" class="logo" style="margin-bottom:14px;display:inline-flex"><span class="c-lime">AB</span><span class="c-white">medica</span></a>
+        <p>Il miglior partner per l'innovazione tecnica e tecnologica in sanità dal 1984.</p>
+        <p class="ft-reg">Reg. Imprese n° 08862820969 — P.IVA 08862820969</p>
+        <div class="soc-row" style="margin-top:18px"><a href="#" class="soc soc-sm">in</a><a href="#" class="soc soc-sm">▶</a><a href="#" class="soc soc-sm">f</a><a href="#" class="soc soc-sm">𝕏</a></div>
       </div>
-      <div class="footer-col">
-        <h4>Soluzioni</h4>
-        <ul>
-          <li><a href="#digital-health">Digital Health</a></li>
-          <li><a href="#robotica">Chirurgia Robotica</a></li>
-          <li><a href="#robotica">da Vinci</a></li>
-          <li><a href="#robotica">CyberKnife</a></li>
-          <li><a href="#robotica">Mako</a></li>
-          <li><a href="#made">Made in AB Medica</a></li>
-          <li><a href="#brand">Brand Distribuiti</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>AB Medica</h4>
-        <ul>
-          <li><a href="#azienda">Essere AB Medica</a></li>
-          <li><a href="#azienda">La Storia</a></li>
-          <li><a href="#azienda">Casa AB Medica</a></li>
-          <li><a href="#azienda">Governance</a></li>
-          <li><a href="#azienda">Sostenibilità</a></li>
-          <li><a href="#azienda">Network</a></li>
-          <li><a href="#contatti">Careers</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Innovazione</h4>
-        <ul>
-          <li><a href="#innovation">Innovation Hub</a></li>
-          <li><a href="#innovation">Ricerca</a></li>
-          <li><a href="#innovation">Sviluppo</a></li>
-          <li><a href="#innovation">Progetti EU</a></li>
-          <li><a href="#formazione">Formazione</a></li>
-          <li><a href="#formazione">Training Center</a></li>
-          <li><a href="#assistenza">Assistenza</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Media & Contatti</h4>
-        <ul>
-          <li><a href="#media">News</a></li>
-          <li><a href="#media">Video</a></li>
-          <li><a href="#media">Podcast</a></li>
-          <li><a href="#media">Rassegna Stampa</a></li>
-          <li><a href="#futuro">Il Futuro della Sanità</a></li>
-          <li><a href="#contatti">Contatti</a></li>
-        </ul>
-      </div>
+      <div class="ft-col"><h4>Soluzioni</h4><ul><li><a href="#digital-health">Digital Health</a></li><li><a href="#robotica">da Vinci</a></li><li><a href="#robotica">CyberKnife</a></li><li><a href="#robotica">Mako</a></li><li><a href="#made">Made in AB Medica</a></li><li><a href="#brand">Brand Distribuiti</a></li></ul></div>
+      <div class="ft-col"><h4>AB Medica</h4><ul><li><a href="#azienda">Chi Siamo</a></li><li><a href="#azienda">La Storia</a></li><li><a href="#azienda">Governance</a></li><li><a href="#azienda">Sostenibilità</a></li><li><a href="#contatti">Careers</a></li></ul></div>
+      <div class="ft-col"><h4>Innovazione</h4><ul><li><a href="#innovation">Innovation Hub</a></li><li><a href="#formazione">Formazione</a></li><li><a href="#assistenza">Assistenza</a></li><li><a href="#futuro">Il Futuro</a></li></ul></div>
+      <div class="ft-col"><h4>Media</h4><ul><li><a href="#media">News</a></li><li><a href="#media">Video</a></li><li><a href="#media">Podcast</a></li><li><a href="#media">Rassegna Stampa</a></li><li><a href="#contatti">Contatti</a></li></ul></div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 AB Medica S.p.A. — Tutti i diritti riservati</span>
-      <div class="fb-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Cookie Policy</a>
-        <a href="#">Note Legali</a>
-        <a href="#">Whistleblowing</a>
-      </div>
-    </div>
+    <div class="ft-bottom"><span>© 2026 AB Medica S.p.A. — Tutti i diritti riservati</span><div class="ft-links"><a href="#">Privacy</a><a href="#">Cookie</a><a href="#">Note Legali</a><a href="#">Whistleblowing</a></div></div>
   </div>
 </footer>
 
-<!-- ======= BACK TO TOP ======= -->
-<button class="back-top" id="backTop" aria-label="Torna su">↑</button>
+<button id="toTop" class="to-top">↑</button>
 
 <script src="js/main.js"></script>
 </body>
